@@ -1,0 +1,291 @@
+* {
+  font-family: "Inter", sans-serif;
+}
+body {
+  display: grid;
+  justify-content: center;
+  /* align-content: space-around; */
+  height: 100vh;
+  margin: 0px;
+  padding: 17px;
+}
+
+#billSection {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: space-around;
+  line-height: 0px;
+}
+#billSection p {
+  font-size: small;
+}
+#billSection h3 {
+  font-size: large;
+}
+#billSection > p:nth-child(even),
+#billSection > h3:nth-child(even) {
+  text-align: right;
+}
+.productDescription {
+  display: grid;
+  grid-template-columns: 20% 75% 5%;
+  justify-content: space-between;
+  gap: 3px;
+  color: #475561;
+  font-weight: lighter;
+  font-family: Inter, sans-serif;
+  /* color: rgb(0, 19, 37); */
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0px;
+  cursor: pointer;
+  margin: unset;
+}
+.amountdiv {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 10px;
+  border-top: 1px #ebecee solid;
+}
+.amountdiv > div + div > p,
+.amountdiv > div + div > h4 {
+  display: inline-block;
+  margin: auto 3px;
+  justify-content: space-between;
+}
+.amountdiv > div + div > p {
+  text-decoration: line-through;
+  color: rgb(118, 146, 173);
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+  letter-spacing: 0px;
+  margin: unset;
+}
+.productDiv {
+  padding: 0px 5px;
+  width: 95%;
+  margin: auto;
+  border: 2px #ebecee solid;
+  margin: 10px;
+  border-radius: 5px;
+  font-size: small;
+}
+.productDiv img {
+  width: 100%;
+}
+.productDescription h5 {
+  margin: 0px;
+}
+
+body::-webkit-scrollbar {
+  width: 5px;
+  background-color: white;
+}
+body::-webkit-scrollbar-thumb {
+  width: 5px;
+  background-color: #fc2779;
+}
+
+.qtyDiv {
+  display: flex;
+  align-items: center;
+}
+.qtyDiv > select {
+  border: none;
+}
+
+#coupons {
+  display: grid;
+  grid-template-columns: 1fr 6fr 1fr;
+  padding: 5px 5px;
+  width: 95%;
+  margin: auto;
+  border: 2px #ebecee solid;
+  margin: 5px 10px;
+  border-radius: 5px;
+  align-content: center;
+}
+
+#coupons img {
+  width: 80%;
+  display: block;
+  margin: auto;
+}
+
+#coupons p {
+  margin: 0px;
+  display: block;
+  padding: 0px 20px;
+  font-size: small;
+  align-items: center;
+}
+#coupons h4 {
+  margin-top: 0px;
+  display: block;
+  margin-bottom: 0px;
+  padding: 0px 20px;
+  font-size: medium;
+  font-weight: bold;
+  align-items: center;
+}
+#coupons i {
+  font-size: 20px;
+  display: block;
+  color: rgb(118, 146, 173);
+  text-align: center;
+  padding: 8px 0px;
+}
+
+#billHead {
+  padding: 3px 5px;
+  width: 95%;
+  margin: auto;
+  border: 2px #ebecee solid;
+  margin: 5px 10px;
+  border-radius: 5px;
+}
+#billHead h3 {
+  font-size: large;
+}
+
+#cartFooter {
+  position: sticky;
+  bottom: 0px;
+  background-color: #ffffff;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 0px;
+  margin: 0px -10px;
+  border-top: 2px #ebecee solid;
+  padding-left: 10px;
+}
+#cartFooter > div {
+  line-height: 0%;
+  font-family: "Inter", sans-serif;
+  align-items: center;
+}
+#cartFooter button {
+  background-color: #e80071;
+  color: white;
+  font-size: larger;
+  padding: 5px 15px;
+  border-radius: 5px;
+  width: 100%;
+  border-color: #e80071;
+  display: flex;
+  justify-content: space-between;
+  align-self: center;
+}
+#cartFooter a {
+  width: 40%;
+  text-decoration: none;
+}
+
+.removeWarning {
+  margin-top: 0px;
+  margin-bottom: 25px;
+  text-align: center;
+}
+.yesOrNo {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: space-around;
+  margin-bottom: 10px;
+}
+
+.yesOrNo > button {
+  padding: 10px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
+  letter-spacing: 0.1px;
+  width: 80%;
+  margin: auto;
+  border: none;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+.yesOrNo > button:nth-child(even) {
+  background-color: #fc2779;
+  color: white;
+}
+.yesOrNo > button:nth-child(odd) {
+  color: #fc2779;
+  background-color: white;
+  border: 1px #fc2779 solid;
+}
+
+.animation {
+  animation-name: cartItem;
+  animation-duration: 1s;
+}
+
+@keyframes cartItem {
+  from {
+    transform: rotateY(180deg);
+  }
+  to {
+    transform: rotateY(360deg);
+  }
+}
+
+
+
+
+#showEmpty > img{
+    width: 70%;
+    display: block;
+    margin: auto;
+}
+#showEmpty > h2{
+    width: 80%;
+    display: block;
+    margin: auto;
+    text-align: center;
+    margin-bottom: 15px;
+}
+#showEmpty > p{
+    
+    width: 90%;
+    display: block;
+    margin: auto;
+    text-align: center;
+}
+#showEmpty  button{
+    
+    display: block;
+    margin: 0px;
+    background-color: #e80071;
+  color: white;
+  font-size: larger;
+   padding: 10px 10px; 
+  border-radius: 5px;
+  width: 100%;
+  border-color: #e80071;
+  
+
+}
+
+#showEmpty a{
+    width: 50%;
+    display: block;
+    margin: auto;
+    text-decoration: none;
+    padding: 0px;
+    margin-top: 15px;
+    
+}
+#showEmpty >a p{
+    text-align: center;
+    padding: 0px;
+    margin: 0px;
+}
+
+
+
