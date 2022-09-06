@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="allproducts.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Tangerine"
+    />
+  </head>
+  <body>
+    <div id="allProductMain">
+      <div id="productcarousel">
+        <!-- Slideshow container -->
+        <div class="slideshow-container">
+          <!-- Full-width images with number and caption text -->
+          <div class="mySlides fade">
+            <img
+              src="https://images-static.nykaa.com/uploads/49631274-b682-46f9-b0ea-7c417ab6255b.jpg?tr=w-1200,cm-pad_resize"
+              style="width: 100%"
+            />
+          </div>
+
+          <div class="mySlides fade">
+            <img
+              src="https://images-static.nykaa.com/uploads/66fc6408-af20-4723-91f1-9dec05b50e5a.jpg?tr=w-1200,cm-pad_resize"
+              style="width: 100%"
+            />
+          </div>
+
+          <div class="mySlides fade">
+            <img
+              src="https://images-static.nykaa.com/uploads/f76f82a3-33ad-4384-b50e-622433d258a6.jpg?tr=w-1200,cm-pad_resize"
+              style="width: 100%"
+            />
+          </div>
+
+          <!-- Next and previous buttons -->
+          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+          <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <br />
+
+        <!-- The dots/circles -->
+        <div style="text-align: center">
+          <span class="dot" onclick="currentSlide(1)"></span>
+          <span class="dot" onclick="currentSlide(2)"></span>
+          <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+      </div>
+      <div id="filter-product">
+        <div id="filter-box">
+          <button type="button" class="collapsible">
+            <span class="bagwhite"
+              >Sort By:
+              <span class="bagwhite" id="sortType"
+                >Price : High to low</span
+              ></span
+            ><span class="bagwhite">&darr;</span>
+          </button>
+          <div class="content">
+            <div class="dropdown">Popularity</div>
+            <div class="dropdown">Discount</div>
+            <div class="dropdown">Name</div>
+            <div class="dropdown">New Arrivals</div>
+            <div class="dropdown">Price : High to low</div>
+            <div class="dropdown">Low to High</div>
+          </div>
+        </div>
+        <div class="products"></div>
+      </div>
+    </div>
+    <script type="module" src="allProducts.js"></script>
+  </body>
+</html>
