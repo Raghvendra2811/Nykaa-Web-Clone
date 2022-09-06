@@ -1,41 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cart</title>
-    <link rel="stylesheet" href="cart.css">
-</head>
-<body>
-    
-    <div id="products">
-
-    </div>
-    <div id="coupons">
-        <img src="https://cdn-icons-png.flaticon.com/512/287/287585.png" alt="">
-        <div>
-            <h4>Coupons</h4>
-            <p>Apply now and save extra!</p>
-        </div>
-        <i class="fa-sharp fa-solid fa-arrow-right"></i>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="cart.css" />
+  </head>
+  <body>
+      <div id="showEmpty">
+        <img src="https://i.ibb.co/ynCTGvz/cartImg.png" alt="">
+        <h2>Your Shopping Bag is Empty</h2>
+        <p>This feels too light! Go on, add all your favourites</p>
+        <a href="test.html" target="_parent">
+          <button><p>Start Shopping</p></button>
+        </a>
+      </div>
+      <div id="products"></div>
+      <div id="coupons">
+      <img src="https://cdn-icons-png.flaticon.com/512/287/287585.png" alt="" />
+      <div>
+        <h4>Coupons</h4>
+        <p style="color: #9a9a9a">Apply now and save extra!</p>
+      </div>
+      <i class="fa-sharp fa-solid fa-arrow-right"></i>
     </div>
     <div id="billHead">
-    <h3>Price Details</h3>
-    <div id="billSection">
-        <p>Bag MRP (10 items)</p>
+      <h3>Price Details</h3>
+      <div id="billSection">
+        <p>Bag MRP (<span id="billItems"></span> items)</p>
         <p>₹<span id="bagMrp"></span></p>
         <p>Bag Discount</p>
         <p>₹<span id="bagDiscount"></span></p>
         <p>Shipping</p>
-        <p>₹<span id="shipping"></span></p>
+        <p>₹<span id="shippingCost"></span></p>
         <h3>You Pay</h3>
         <h3>₹<span id="total"></span></h3>
+      </div>
     </div>
-    </div>
-
-</body>
+  
+    <div id="cartFooter">
+      <div>
+        <h3>₹<span id="grandTotal"></span></h3>
+        <h4>Grand Total</h4>
+      </div>
+      <a href="payment.html" target="_parent"
+      ><button>Proceed<i class="fa-sharp fa-solid fa-arrow-right"></i></button
+        ></a>
+      </div>
+  </body>
 </html>
 
 <script src="cart.js"></script>
-<script src="https://kit.fontawesome.com/a103610109.js" crossorigin="anonymous"></script>
+<!-- <script  src="test.js"></script> -->
+<script
+  src="https://kit.fontawesome.com/a103610109.js"
+  crossorigin="anonymous"
+></script>
