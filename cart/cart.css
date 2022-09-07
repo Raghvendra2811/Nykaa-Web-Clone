@@ -287,6 +287,8 @@ body::-webkit-scrollbar-thumb {
     margin: 0px;
 }
 
-
+.check{
+  opacity: 100%;
+}
 
 
