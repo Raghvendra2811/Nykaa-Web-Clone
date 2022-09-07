@@ -98,6 +98,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 #coupons {
+  cursor: pointer;
   display: grid;
   grid-template-columns: 1fr 6fr 1fr;
   padding: 5px 5px;
@@ -289,3 +290,66 @@ body::-webkit-scrollbar-thumb {
 
 
 
+#couponApply{
+  display: none;
+  padding: 5px 5px;
+  width: 95%;
+  margin: auto;
+  border: 2px #ebecee solid;
+  margin: 5px 10px;
+  border-radius: 5px;
+  justify-items: center;
+  align-content: center;
+  animation-name: couponOpen;
+  animation-duration: 500ms;
+  animation-timing-function: linear;
+  position: relative;
+  top: 0px;
+}
+
+#couponApply input{
+  display: block;
+  margin: auto;
+  text-align: center;
+  width:fit-content;
+  margin-bottom: 5px;
+  padding: 5px 0px;
+
+}
+#couponApply h3{
+  text-align: center;
+  margin-bottom: 3px;
+}
+#couponApply input:nth-child(odd){
+  margin:0px auto 10px auto;
+
+}
+#couponApply button{
+  text-align: center;
+  display: block;
+  margin: auto;
+  background-color: #e80071;
+  color: white;
+  font-size: larger;
+  padding: 5px 0px;
+  border-radius: 5px;
+  width: 40%;
+  border-color: #e80071;
+  
+  justify-content: space-between;
+  align-self: center;
+}
+
+#couponApply span{
+  text-align: center;
+}
+
+@keyframes couponOpen {
+  from{
+    top:-25px;
+
+  }
+  to{
+    top: 0px;
+  }
+}

@@ -37,7 +37,7 @@ display(cartProducts);
 function display(products) {
     if(cartProducts.length>=1){
         document.getElementById("products").style.display="block";
-        document.getElementById("coupons").style.display="grid";
+        document.getElementById("couponAll").style.display="block";
         document.getElementById("billHead").style.display="block";
         document.getElementById("cartFooter").style.display="flex";
         document.getElementById("showEmpty").style.display="none";
@@ -46,7 +46,7 @@ function display(products) {
     else{
         
         document.getElementById("products").style.display="none";
-        document.getElementById("coupons").style.display="none";
+        document.getElementById("couponAll").style.display="none";
         document.getElementById("billHead").style.display="none";
         document.getElementById("cartFooter").style.display="none";
         document.getElementById("showEmpty").style.display="block";
@@ -106,6 +106,14 @@ products.map(function (elem, index) {
         document.getElementById("shippingCost").innerText =70;
 
     }
+    if(localStorage.getItem("couponApplied")==1){
+      document.getElementById("couponAmount").innerText = (bagDiscount(cartProducts)*10/100).toFixed(1);
+      
+    }
+    else{
+      document.getElementById("couponAmount").innerText = 0;
+
+    }
     document.getElementById("total").innerText = getTotal();
     document.getElementById("grandTotal").innerText =
     document.getElementById("total").innerText;
@@ -140,11 +148,7 @@ function bagOrignalPrice(arr) {
 }
 
 function getTotal() {
-  return (
-    Number(document.getElementById("bagMrp").innerText) -
-    Number(document.getElementById("bagDiscount").innerText) +
-    Number(document.getElementById("shippingCost").innerText)
-  );
+  return (Number(document.getElementById("bagMrp").innerText) -Number(document.getElementById("bagDiscount").innerText) +Number(document.getElementById("couponAmount").innerText)+Number(document.getElementById("shippingCost").innerText));
 }
 
 function changeQty(elem) {
@@ -189,5 +193,35 @@ function deleteItem(elem, index) {
 function removeItemFromCart(index) {
   cartProducts.splice(index, 1);
   localStorage.setItem("cartProducts", JSON.stringify(cartProducts));
+  display(cartProducts);
+}
+
+document.getElementById("coupons").addEventListener("click",openCoupons);
+
+function openCoupons(){
+  var couponBox = document.getElementById("couponApply");
+
+  if(couponBox.style.display=="none"){
+    couponBox.style.display="block";
+  }
+  else{
+    couponBox.style.display="none";
+
+  }
+
+}
+
+document.querySelector("form").addEventListener("submit",applyCoupon);
+
+function applyCoupon(){
+  event.preventDefault();
+  if(document.getElementById("couponcode").value=="NAYKAA10"){
+    
+    localStorage.setItem("couponApplied",1);
+  }
+  else{
+    
+    localStorage.setItem("couponApplied",0);
+  }
   display(cartProducts);
 }
