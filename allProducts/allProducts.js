@@ -1,221 +1,80 @@
-import { getname } from "./product.js";
-getname();
-console.log("allProducts");
+import { allProducts } from "./data.js";
 
-var productsData = [
-  {
-    image_url1:
-      "https://images-static.nykaa.com/media/catalog/product/2/8/28ea4708904245709709_1.jpg",
-    name: "Nykaa Naturals Skin Potion Anti- Pollution Skincare Face Oil",
-    strikedoffprice: "499",
-    price: "399",
-    discount: "20%",
-  },
-  // {
-  //   image_url1:
-  //     "https://images-static.nykaa.com/media/catalog/product/2/8/28ea4708904245709709_1.jpg",
-  //   name: "Nykaa Naturals Skin Potion Anti- Pollution Skincare Face Oil",
-  //   strikedoffprice: "499",
-  //   price: "399",
-  //   discount: "20%",
-  // },
-  // {
-  //   image_url1:
-  //     "https://images-static.nykaa.com/media/catalog/product/2/8/28ea4708904245709709_1.jpg",
-  //   name: "Nykaa Naturals Skin Potion Anti- Pollution Skincare Face Oil",
-  //   strikedoffprice: "499",
-  //   price: "399",
-  //   discount: "20%",
-  // },
-  // {
-  //   image_url1:
-  //     "https://images-static.nykaa.com/media/catalog/product/2/8/28ea4708904245709709_1.jpg",
-  //   name: "Nykaa Naturals Skin Potion Anti- Pollution Skincare Face Oil",
-  //   strikedoffprice: "499",
-  //   price: "399",
-  //   discount: "20%",
-  // },
-  // {
-  //   image_url1:
-  //     "https://images-static.nykaa.com/media/catalog/product/2/8/28ea4708904245709709_1.jpg",
-  //   name: "Nykaa Naturals Skin Potion Anti- Pollution Skincare Face Oil",
-  //   strikedoffprice: "499",
-  //   price: "399",
-  //   discount: "20%",
-  // },
-  // {
-  //   image_url1:
-  //     "https://images-static.nykaa.com/media/catalog/product/2/8/28ea4708904245709709_1.jpg",
-  //   name: "Nykaa Naturals Skin Potion Anti- Pollution Skincare Face Oil",
-  //   strikedoffprice: "499",
-  //   price: "399",
-  //   discount: "20%",
-  // },
-  // {
-  //   image_url1:
-  //     "https://images-static.nykaa.com/media/catalog/product/2/8/28ea4708904245709709_1.jpg",
-  //   name: "Nykaa Naturals Skin Potion Anti- Pollution Skincare Face Oil",
-  //   strikedoffprice: "499",
-  //   price: "399",
-  //   discount: "20%",
-  // },
-  // {
-  //   image_url1:
-  //     "https://images-static.nykaa.com/media/catalog/product/2/8/28ea4708904245709709_1.jpg",
-  //   name: "Nykaa Naturals Skin Potion Anti- Pollution Skincare Face Oil",
-  //   strikedoffprice: "499",
-  //   price: "399",
-  //   discount: "20%",
-  // },
-  // {
-  //   image_url1:
-  //     "https://images-static.nykaa.com/media/catalog/product/2/8/28ea4708904245709709_1.jpg",
-  //   name: "Nykaa Naturals Skin Potion Anti- Pollution Skincare Face Oil",
-  //   strikedoffprice: "499",
-  //   price: "399",
-  //   discount: "20%",
-  // },
-  // {
-  //   image_url1:
-  //     "https://images-static.nykaa.com/media/catalog/product/2/8/28ea4708904245709709_1.jpg",
-  //   name: "Nykaa Naturals Skin Potion Anti- Pollution Skincare Face Oil",
-  //   strikedoffprice: "499",
-  //   price: "399",
-  //   discount: "20%",
-  // },
-  // {
-  //   image_url1:
-  //     "https://images-static.nykaa.com/media/catalog/product/2/8/28ea4708904245709709_1.jpg",
-  //   name: "Nykaa Naturals Skin Potion Anti- Pollution Skincare Face Oil",
-  //   strikedoffprice: "499",
-  //   price: "399",
-  //   discount: "20%",
-  // },
-  // {
-  //   image_url1:
-  //     "https://images-static.nykaa.com/media/catalog/product/2/8/28ea4708904245709709_1.jpg",
-  //   name: "Nykaa Naturals Skin Potion Anti- Pollution Skincare Face Oil",
-  //   strikedoffprice: "499",
-  //   price: "399",
-  //   discount: "20%",
-  // },
-  // {
-  //   image_url1:
-  //     "https://images-static.nykaa.com/media/catalog/product/2/8/28ea4708904245709709_1.jpg",
-  //   name: "Nykaa Naturals Skin Potion Anti- Pollution Skincare Face Oil",
-  //   strikedoffprice: "499",
-  //   price: "399",
-  //   discount: "20%",
-  // },
-  // {
-  //   image_url1:
-  //     "https://images-static.nykaa.com/media/catalog/product/2/8/28ea4708904245709709_1.jpg",
-  //   name: "Nykaa Naturals Skin Potion Anti- Pollution Skincare Face Oil",
-  //   strikedoffprice: "499",
-  //   price: "399",
-  //   discount: "20%",
-  // },
-  // {
-  //   image_url1:
-  //     "https://images-static.nykaa.com/media/catalog/product/2/8/28ea4708904245709709_1.jpg",
-  //   name: "Nykaa Naturals Skin Potion Anti- Pollution Skincare Face Oil",
-  //   strikedoffprice: "499",
-  //   price: "399",
-  //   discount: "20%",
-  // },
-  // {
-  //   image_url1:
-  //     "https://images-static.nykaa.com/media/catalog/product/2/8/28ea4708904245709709_1.jpg",
-  //   name: "Nykaa Naturals Skin Potion Anti- Pollution Skincare Face Oil",
-  //   strikedoffprice: "499",
-  //   price: "399",
-  //   discount: "20%",
-  // },
-  // {
-  //   image_url1:
-  //     "https://images-static.nykaa.com/media/catalog/product/2/8/28ea4708904245709709_1.jpg",
-  //   name: "Nykaa Naturals Skin Potion Anti- Pollution Skincare Face Oil",
-  //   strikedoffprice: "499",
-  //   price: "399",
-  //   discount: "20%",
-  // },
-  // {
-  //   image_url1:
-  //     "https://images-static.nykaa.com/media/catalog/product/2/8/28ea4708904245709709_1.jpg",
-  //   name: "Nykaa Naturals Skin Potion Anti- Pollution Skincare Face Oil",
-  //   strikedoffprice: "499",
-  //   price: "399",
-  //   discount: "20%",
-  // },
-  {
-    image_url1:
-      "https://images-static.nykaa.com/media/catalog/product/2/8/28ea4708904245709709_1.jpg",
-    name: "Nykaa Naturals Skin Potion Anti- Pollution Skincare Face Oil",
-    strikedoffprice: "499",
-    price: "399",
-    discount: "20%",
-  },
-  {
-    image_url1:
-      "https://images-static.nykaa.com/media/catalog/product/2/8/28ea4708904245709709_1.jpg",
-    name: "Nykaa Naturals Skin Potion Anti- Pollution Skincare Face Oil",
-    strikedoffprice: "499",
-    price: "399",
-    discount: "20%",
-  },
-];
-productsData.forEach(function (elem, index) {
-  var card = document.createElement("div");
-  card.setAttribute("class", "bagwhite card");
-  var featured = document.createElement("div");
-  featured.setAttribute("class", "featured bagwhite");
-  var imgDiv = document.createElement("div");
-  imgDiv.setAttribute("class", "imgDiv bagwhite");
-  var detailDiv = document.createElement("div");
-  detailDiv.setAttribute("class", "detailDiv bagwhite");
-  featured.innerText = "FEATURED";
-  var img = document.createElement("img");
-  img.setAttribute("class", "img bagwhite");
-  img.setAttribute("src", elem.image_url1);
-  imgDiv.append(img);
-  var productDiv = document.createElement("div");
-  productDiv.setAttribute("class", "productDiv bagwhite");
-  productDiv.innerText = elem.name;
+var categoryvariable = "skin";
 
-  var priceDiv = document.createElement("div");
-  priceDiv.setAttribute("class", "priceDiv bagwhite");
+var displayArray = [];
+for (var i = 0; i < allProducts.length; i++) {
+  if (categoryvariable === "#") {
+    displayArray = allProducts;
+    break;
+  } else if (allProducts[i].category == categoryvariable) {
+    displayArray.push(allProducts[i]);
+  }
+}
 
-  var mrp = document.createElement("span");
-  mrp.setAttribute("class", "mrp bagwhite");
-  mrp.innerText = "MRP: ";
+display(displayArray);
 
-  var strikedPrice = document.createElement("span");
-  strikedPrice.setAttribute("class", "strikedPrice bagwhite");
-  strikedPrice.innerText = elem.strikedoffprice;
+// SORT FUNCTION
 
-  var price = document.createElement("span");
-  price.setAttribute("class", "price bagwhite");
-  price.innerText = elem.price;
+function display(displayArray) {
+  document.querySelector(".products").innerText="";
+  displayArray.forEach(function (elem, index) {
+    var card = document.createElement("div");
+    card.setAttribute("class", "bagwhite card");
+    var featured = document.createElement("div");
+    featured.setAttribute("class", "featured bagwhite");
+    var imgDiv = document.createElement("div");
+    imgDiv.setAttribute("class", "imgDiv bagwhite");
+    var detailDiv = document.createElement("div");
+    detailDiv.setAttribute("class", "detailDiv bagwhite");
+    featured.innerText = "FEATURED";
+    var img = document.createElement("img");
+    img.setAttribute("class", "img bagwhite");
+    img.setAttribute("src", elem.image);
+    imgDiv.append(img);
+    var productDiv = document.createElement("div");
+    productDiv.setAttribute("class", "productDiv bagwhite");
+    productDiv.innerText = elem.name;
 
-  var discount = document.createElement("span");
-  discount.setAttribute("class", "discount bagwhite");
-  discount.innerText = elem.discount;
-  priceDiv.append(mrp, strikedPrice, price, discount);
-  var ratingDiv = document.createElement("div");
-  ratingDiv.setAttribute("class", "ratingDiv bagwhite");
-  ratingDiv.innerText = "* * * * *(4.5)";
+    var priceDiv = document.createElement("div");
+    priceDiv.setAttribute("class", "priceDiv bagwhite");
 
-  var extraGift = document.createElement("div");
-  extraGift.setAttribute("class", "extraGift bagwhite");
-  extraGift.innerText = "Enjoy Free Gift";
+    var mrp = document.createElement("span");
+    mrp.setAttribute("class", "mrp bagwhite");
+    mrp.innerText = "MRP: ";
 
-  detailDiv.append(productDiv, priceDiv, extraGift, ratingDiv);
-  card.append(featured, imgDiv, detailDiv);
-  document.querySelector(".products").append(card);
-});
-document.querySelector(".card").addEventListener("click", addToBag);
-function addToBag() {
-  console.log("hello");
+    var strikedPrice = document.createElement("span");
+    strikedPrice.setAttribute("class", "strikedPrice bagwhite");
+    strikedPrice.innerText = elem.strikedoffprice;
+
+    var price = document.createElement("span");
+    price.setAttribute("class", "price bagwhite");
+    price.innerText = elem.price;
+
+    var discount = document.createElement("span");
+    discount.setAttribute("class", "discount bagwhite");
+    discount.innerText = "10%";
+    priceDiv.append(mrp, strikedPrice, price, discount);
+    var ratingDiv = document.createElement("div");
+    ratingDiv.setAttribute("class", "ratingDiv bagwhite");
+    ratingDiv.innerText = "* * * * *(4.5)";
+
+    var extraGift = document.createElement("div");
+    extraGift.setAttribute("class", "extraGift bagwhite");
+    extraGift.innerText = "Enjoy Free Gift";
+
+    detailDiv.append(productDiv, priceDiv, extraGift, ratingDiv);
+    card.append(featured, imgDiv, detailDiv);
+    card.addEventListener("click", function () {
+      showProduct(elem);
+    });
+    document.querySelector(".products").append(card);
+  });
+}
+
+function showProduct(elem) {
+  localStorage.setItem("specificProduct",elem);
+  location.href="product.html";
 }
 
 let slideIndex = 1;

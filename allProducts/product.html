@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+      integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="product.css" />
+  </head>
+  <body>
+    <div id="main-Product-Page">
+      <div id="productDetail" class="bgwhite">
+        <div id="upperSec">
+          <div id="imgBox" class="bgwhite">
+            <i
+              class="fa fa-heart-o bgwhite"
+              onclick="changeHeart()"
+              aria-hidden="true"
+            ></i>
+            <img
+              src="https://images-static.nykaa.com/media/catalog/product/2/8/28ea4708904245709709_1.jpg"
+              alt=""
+              srcset=""
+            />
+          </div>
+          <div id="detailBox" class="bgwhite">
+            <div id="name" class="bgwhite">
+              <h1 class="bgwhite">
+                Nykaa Naturals Skin Potion Anti- Pollution Skincare Face Oil
+              </h1>
+              <h1 class="bgwhite">(30ml)</h1>
+            </div>
+            <div id="rating" class="bgwhite">
+              <span id="review" class="bgwhite">
+                <i class="fa fa-star bgwhite" aria-hidden="true"></i>
+                <i class="fa fa-star bgwhite" aria-hidden="true"></i>
+                <i class="fa fa-star bgwhite" aria-hidden="true"></i>
+                <i class="fa fa-star bgwhite" aria-hidden="true"></i>
+                <i class="fa fa-star-half-o bgwhite" aria-hidden="true"></i>
+                4.2/5
+                <span id="ratingr" class="bgwhite"
+                  >16645 ratings & 3864 reviews</span
+                >
+              </span>
+              <span id="qa" class="bgwhite"> Q&As </span>
+            </div>
+            <div id="priceBox" class="bgwhite">
+              <span class="mrp bgwhite">MRP:</span
+              ><span class="strikedPrice bgwhite">499</span
+              ><span class="price bgwhite">350</span
+              ><span class="discount bgwhite">20%</span>
+              <div id="taxes" class="bgwhite">• inclusive of all taxes</div>
+              <div id="free">• Pick a Free Lipstick or Serum on Rs. 799.</div>
+              <div id="bagDiv" class="bgwhite">
+                <button type="button" id="addBag">Add to Bag</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="lowerSec">
+          <div class="loewrLeft">
+            <div id="descriptionDiv">
+              <h1>Product Description</h1>
+            </div>
+          </div>
+          <div class="lowerRight">
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      function changeHeart() {
+        var filledHeart = document.querySelector(".fa-heart-o");
+        var emptyHeart = document.querySelector(".fa-heart");
+        if (filledHeart)
+          filledHeart.setAttribute("class", "fa fa-heart bgwhite");
+        if (emptyHeart)
+          emptyHeart.setAttribute("class", "fa fa-heart-o bgwhite");
+      }
+    </script>
+    <script src="product.js"></script>
+  </body>
+</html>
