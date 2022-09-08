@@ -5,94 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register Page</title>
-    <style>
-        body{
-            background-color:#F3F3F3;
-        }
-        .center{
-            position: absolute;
-            padding-top: 18px;
-            top: 48%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 350px;
-            background-color: white;
-            border-radius: 15px;
-            border: 1px solid silver;
-        }
-        .center p{
-            text-align: center;
-            padding: 0 0 20px 0;
-            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            font-size: 16px;
-            font-weight: 600px;
-            border-bottom: 1px solid silver;
-        }
-        .center p{
-            text-align: center;
-        }
-        p + span{
-            color: crimson;
-        }
-        .center form{
-            padding: 0 40px;
-            box-sizing: border-box;
-        }
-        form .txt_field{
-            position: relative;
-            border-bottom: 1px solid silver;
-            margin: 30px 0;
-        }
-        .txt_field input{
-            width: 100%;
-            padding: 0 5px;
-            height: 40px;
-            border: none;
-            background: none;
-            outline: none;
-        }
-        .txt_field label{
-            position: absolute;
-            top: 50%;
-            left: 5px;
-            color: silver;
-            transform: translateY(-50%);
-            font-size: 16px;
-            pointer-events: none;
-            transition: .5s;
-        }
-        .txt_field span::before{
-            content: '';
-            position: absolute;
-            top: 40px;
-            left: 0;
-            width: 0%;
-            height: 2px;
-            background: #FF0000;
-            transition: .5s;
-        }
-        .txt_field input:focus ~ label,
-        .txt_field input:valid ~ label{
-            top: -5px;
-            color: #FC2779;
-            font-size: 14px;
-        }
-        .txt_field input:focus ~ span::before,
-        .txt_field input:valid ~ span::before{
-            width: 100%;
-        }
-        input[type="submit"]{
-            width: 100%;
-            height: 50px;
-            border: 1px solid;
-            color: white;
-            background: #FC2779;
-            cursor: pointer;
-            outline: none;
-            margin-bottom: 80px;
-            margin-top: 40px;
-        }
-    </style>
+    <link rel="stylesheet" href="registerPage.css">
 </head>
 <body>
     <div class="center">
@@ -127,21 +40,15 @@
 
 <script>
      var id = localStorage.getItem("emailId");
-    // document.getElementById("email").value = id;
-    // console.log(id);
     var userDeatail = JSON.parse(localStorage.getItem("userDetails")) || [];
+
     document.querySelector("#submit").addEventListener("click", function(){
-        // event.preventDefault();
+
         var userName = document.getElementById("user").value;
-        console.log(userName);
         var phoneNum = document.getElementById("phone").value;
-        console.log(phoneNum);
          var userEmail = document.getElementById("email").value;
-         console.log(userEmail);
-        // document.getElementById("email").value = id;
          var userEmail = id;
          document.getElementById("email").innerText=userEmail;
-         console.log(userEmail);
         var userPass = document.getElementById("pass").value;
 
         if(userName !=="" && phoneNum !=="" && userEmail!=="" && userPass!==""){
@@ -156,6 +63,7 @@
             userDeatail.push(newUser);
             localStorage.setItem("userDetails", JSON.stringify(userDeatail));
             // window.location.href = ""  ------->HOME PAGE
+            window.location.href="./homePage.html";
         }
     });
 </script>
