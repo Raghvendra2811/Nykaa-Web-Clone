@@ -7,6 +7,30 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css?family=Tangerine"
     />
+    <style>
+      .pagination {
+        display: inline-block;
+      }
+
+      .pagination span {
+        color: black;
+        float: left;
+        padding: 8px 16px;
+        text-decoration: none;
+        transition: background-color 0.3s;
+        border: 1px solid #ddd;
+      }
+
+      .pagination span .active {
+        background-color: #4caf50;
+        color: white;
+        border: 1px solid #4caf50;
+      }
+
+      .pagination span:hover:not(.active) {
+        background-color: #ddd;
+      }
+    </style>
   </head>
   <body>
     <div id="allProductMain">
@@ -51,23 +75,90 @@
       <div id="filter-product">
         <div id="filter-box">
           <button type="button" class="collapsible">
-            <span class="bagwhite"
-              >Sort By:
-              <span class="bagwhite" id="sortType"
-                >Price : High to low</span
-              ></span
+            <span class="bagwhite">Sort By: </span
+            ><span class="bagwhite">&darr;</span>
+          </button>
+          <button type="button" class="collapsible1">
+            <span class="bagwhite">Preference </span
+            ><span class="bagwhite">&darr;</span>
+          </button>
+          <button type="button" class="collapsible1">
+            <span class="bagwhite">Preference </span
+            ><span class="bagwhite">&darr;</span>
+          </button>
+          <button type="button" class="collapsible1">
+            <span class="bagwhite">Preference </span
+            ><span class="bagwhite">&darr;</span>
+          </button>
+          <button type="button" class="collapsible1">
+            <span class="bagwhite">Preference </span
+            ><span class="bagwhite">&darr;</span>
+          </button>
+          <button type="button" class="collapsible1">
+            <span class="bagwhite">Preference </span
             ><span class="bagwhite">&darr;</span>
           </button>
           <div class="content">
-            <div class="dropdown">High to low</div>
-            <div class="dropdown">Low to High</div>
+            <div class="dropdown" id="HtoL">High to low</div>
+            <div class="dropdown" id="LtoH">Low to High</div>
             <div class="dropdown">Popularity</div>
             <div class="dropdown">Discount</div>
           </div>
         </div>
         <div class="products"></div>
       </div>
+      <div id="sticky-box">
+        <div id="1sticky-box">
+          <button type="button" class="collapsible">
+            <span class="bagwhite">Sort By: </span
+            ><span class="bagwhite">&darr;</span>
+          </button>
+          <div class="content">
+            <div class="dropdown" id="HtoL1">High to low</div>
+            <div class="dropdown" id="LtoH1">Low to High</div>
+            <div class="dropdown">Popularity</div>
+            <div class="dropdown">Discount</div>
+          </div>
+        </div>
+        <div id="2sticky-box">
+          <div class="content"></div>
+        </div>
+      </div>
     </div>
+    <div class="pagination"></div>
     <script type="module" src="allProducts.js"></script>
+    <script type="module" src="data.js"></script>
+    <script>
+      let slideIndex = 1;
+      showSlides(slideIndex);
+
+      function plusSlides(n) {
+        showSlides((slideIndex += n));
+      }
+
+      function currentSlide(n) {
+        showSlides((slideIndex = n));
+      }
+
+      function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        let dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {
+          slideIndex = 1;
+        }
+        if (n < 1) {
+          slideIndex = slides.length;
+        }
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+      }
+    </script>
   </body>
 </html>
