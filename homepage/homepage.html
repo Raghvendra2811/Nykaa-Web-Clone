@@ -6,9 +6,63 @@
     <title>Document</title>
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
-</head>
+       <!--Swiper css-->
+    <link rel="stylesheet" href="css/swiper-bundle.min.css" >
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+  />
+  </head>
 <style>
-    *{
+  .slider1 {
+        position: relative;
+        height: 100%;
+      
+      }
+
+      .slider1{
+        background: #eee;
+        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        color: #000;
+        margin: 0;
+        padding: 0;
+      }
+
+      .swiper {
+        width: 100%;
+        height: 60%;
+        background-color: pink;
+      }
+
+      .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+      }
+
+      .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+   
+      *{
     box-sizing: border-box;}
 body {font-family: Verdana, sans-serif;}
 .mySlides {display: none;}
@@ -257,7 +311,7 @@ margin-top: -60px;
     margin-left: 60px;
 }
 img:hover{
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
 }
 .carousel-cell {
       width: 86%;
@@ -316,6 +370,15 @@ img:hover{
       .special{
         margin: 50px;
         margin-left: 70px;
+      }
+      .luxe{
+        
+        margin:2%;
+        margin-left: 6%;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+      }
+      .trending{
+        width:100%;
       }
 </style>
 <body>
@@ -405,6 +468,7 @@ img:hover{
     </script>
     <!--section2-->
     <br>
+    <img class="luxe" src="https://images-static.nykaa.com/uploads/c26e921e-ce90-428a-9a82-52d2e785dbe4.gif?tr=w-1200,cm-pad_resize"/>
     <h2>CATEGORIES IN FOCUS</h2>
 
         <div class="carousel" data-flickity='{"wrapAround": true }'>
@@ -650,6 +714,52 @@ img:hover{
             <!--End of only at naykaa-->
 
         </div>
+<img class="trending" src="https://images-static.nykaa.com/uploads/01e06084-aaff-4a79-b8ad-56a1925bbc48.png?tr=w-1200,cm-pad_resize"/>
+          <!-- Swiper -->
+     <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="https://images-static.nykaa.com/uploads/5e9c007c-9b44-4485-b8cd-b9cf1adfe49c.png?tr=w-240,cm-pad_resize" alt="img" class="card-img"/>
+          
+
+        </div>
+        <div class="swiper-slide">
+          <img src="https://images-static.nykaa.com/uploads/46e74f08-ca24-4dd2-abe3-2e3fa7c675fc.png?tr=w-240,cm-pad_resize" alt="img" class="card-img"/>
+
+        </div>
+        <div class="swiper-slide">
+          <img src="https://images-static.nykaa.com/uploads/7cd2eeae-f276-48e0-8586-bfbb304d6043.jpg?tr=w-240,cm-pad_resize" alt="img" class="card-img"/>
+
+        </div>
+        <div class="swiper-slide">
+          <img src="https://images-static.nykaa.com/uploads/a72cab82-563f-4ca1-ba26-cfe1a2942e60.jpg?tr=w-240,cm-pad_resize" alt="img" class="card-img"/>
+
+        </div>
+        <div class="swiper-slide">
+          <img src="https://images-static.nykaa.com/uploads/a8d2592a-0de3-42b0-87d9-32f163a86f50.png?tr=w-240,cm-pad_resize" alt="img" class="card-img"/>
+
+        </div>
+        <div class="swiper-slide">
+          <img src="https://images-static.nykaa.com/uploads/96b20db6-e6b1-4576-a7c8-314de6d7fa67.png?tr=w-240,cm-pad_resize" alt="img" class="card-img"/>
+
+        </div>
+        <div class="swiper-slide">
+          <img src="https://images-static.nykaa.com/uploads/39e22999-1d18-4cd4-8cd9-ca3c82d7eee7.jpg?tr=w-240,cm-pad_resize" alt="img" class="card-img"/>
+
+        </div>
+        <div class="swiper-slide">
+          <img src="https://images-static.nykaa.com/uploads/4bf7f0f9-3075-4a43-bd5d-c78f618c3eed.png?tr=w-240,cm-pad_resize" alt="img" class="card-img"/>
+
+        </div>
+        <div class="swiper-slide">
+          <img src="https://images-static.nykaa.com/uploads/ac99be64-68ff-4afd-92d2-98e9b4df2b50.png?tr=w-240,cm-pad_resize" alt="img" class="card-img"/>
+        </div>
+      </div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-pagination"></div>
+    </div>
+  </div>
      <!-- Different Box Models Section-->
      <div class="f">
         <h2 >FEATURED BRANDS</h2>
@@ -862,4 +972,7 @@ img:hover{
     <img class="last" src="https://images-static.nykaa.com/uploads/58c1c0b0-5a0b-4614-acfc-3205e669d8a7.jpg?tr=w-1200,cm-pad_resize"/>
     
 </body>
+<!--Swiper js-->
+<script src="js/swiper-bundle.min.js"> </script>
+<script src="js/script.js"></script>
 </html>
