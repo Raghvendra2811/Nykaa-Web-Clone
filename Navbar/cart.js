@@ -45,8 +45,8 @@ function displayProducts(products) {
     deleteIcon.childNodes[0].addEventListener("click", function () {
       deleteItem(elem, index);
     });
-    discountAmt.innerText = elem.strikedoffprice;
-    actualAmt.innerText = elem.price;
+    discountAmt.innerText = Number(elem.strikedoffprice).toFixed(1);
+    actualAmt.innerText = Number(elem.price).toFixed(1);
     // Quantity Selecter
     priceDiv.append(discountAmt, actualAmt);
     productDescription.append(prodcutimg, productName, deleteIcon);
@@ -63,20 +63,20 @@ function displayProducts(products) {
     productDiv.setAttribute("class", "productDiv");
     qtyDiv.setAttribute("class", "qtyDiv");
     document.getElementById("billItems").innerText = cartProducts.length;
-    document.getElementById("bagMrp").innerText = bagMrp(cartProducts);
+    document.getElementById("bagMrp").innerText = bagMrp(cartProducts).toFixed(1);
     document.getElementById("bagDiscount").innerText =
       bagDiscount(cartProducts).toFixed(1);
-    if (bagDiscount(cartProducts) >= 499) {
+    if (bagOrignalPrice(cartProducts) >= 499) {
       document.getElementById("shippingCost").innerText = 0;
     } else {
       document.getElementById("shippingCost").innerText = 70;
     }
     if (localStorage.getItem("couponApplied") == 1) {
-      document.getElementById("couponAmount").innerText = ((bagDiscount(cartProducts)).toFixed(1));
+      document.getElementById("couponAmount").innerText = ((((bagOrignalPrice(cartProducts))/100)*10).toFixed(1));
     } else {
       document.getElementById("couponAmount").innerText = 0;
     }
-    document.getElementById("total").innerText = getTotal();
+    document.getElementById("total").innerText = getTotal(cartProducts).toFixed(1);
     document.getElementById("grandTotal").innerText =
       document.getElementById("total").innerText;
   });
@@ -100,23 +100,31 @@ function bagDiscount(arr) {
     }, 0) - bagOrignalPrice(arr)
   );
 }
+function bagDiscount1(arr){
+  return(arr.reduce(function (sum, ele) {
+    return sum + +ele.strikedoffprice;
+  }, 0));
+
+  
+}
 
 function bagMrp(arr) {
   return arr.reduce(function (sum, ele) {
-    return sum + +ele.strikedoffprice;
-  }, 0);
-}
-function bagOrignalPrice(arr) {
-  return arr.reduce(function (sum, ele) {
-    return sum + +ele.price;
+    return +sum + +ele.strikedoffprice;
   }, 0);
 }
 
-function getTotal() {
+
+function bagOrignalPrice(arr) {
+  var res =arr.reduce(function (sum, ele) {
+    return +sum + +ele.price;
+  }, 0);
+  return res;
+}
+
+function getTotal(cartProducts) {
   return (
-    Number(document.getElementById("bagMrp").innerText) -
-    Number(document.getElementById("couponAmount").innerText) +
-    Number(document.getElementById("shippingCost").innerText)
+    bagOrignalPrice(cartProducts)-Number(document.getElementById("couponAmount").innerText)+Number(document.getElementById("shippingCost").innerText)
   );
 }
 
