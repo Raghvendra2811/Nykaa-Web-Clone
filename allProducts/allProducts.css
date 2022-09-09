@@ -56,7 +56,12 @@
   margin-top: 15px;
   /* border: 20px solid  green; */
 }
-
+.ratingDiv{
+  margin: 20px;
+}
+.bgwhite{
+  background-color: #ffffff;
+}
 * {
   margin: 0px;
   padding: 0px;

@@ -70,7 +70,14 @@ function display(displayArray, n, currentPage) {
     priceDiv.append(mrp, strikedPrice, price, discount);
     var ratingDiv = document.createElement("div");
     ratingDiv.setAttribute("class", "ratingDiv bagwhite");
-    ratingDiv.innerText = "* * * * *(4.5)";
+    ratingDiv.innerHTML = '  <span id="review" class="bgwhite"><i class="fa fa-star bgwhite" aria-hidden="true"></i><i class="fa fa-star bgwhite" aria-hidden="true"></i><i class="fa fa-star bgwhite" aria-hidden="true"></i><i class="fa fa-star bgwhite" aria-hidden="true"></i><i class="fa fa-star-half-o bgwhite" aria-hidden="true"></i>4.2/5</span>';
+
+
+
+
+
+
+
 
     var extraGift = document.createElement("div");
     extraGift.setAttribute("class", "extraGift bagwhite");
@@ -91,14 +98,19 @@ function display(displayArray, n, currentPage) {
   const paginationSize = Math.ceil(displayArray.length / 15);
   console.log(displayArray, "displayArray");
   console.log(paginationSize, "paginationSize");
-
-  for (let p = currentPage - 2; p < currentPage + 2; p++) {
-    // if(currentPage>paginationSize){
-    //   break
-    // }
-    // if(currentPage<1){
-    //   break
-    // }
+  let start = 0;
+  let end = 5;
+  if (currentPage <= 3) {
+    start = 0;
+    end = 5;
+  } else {
+    start = currentPage - 3;
+    end = currentPage + 2;
+  }
+  if (currentPage >= paginationSize) {
+    end = paginationSize - 1;
+  }
+  for (let p = start; p < end; p++) {
     var span = document.createElement("span");
     let className = "span" + (p + 1);
     span.setAttribute("class", className);
