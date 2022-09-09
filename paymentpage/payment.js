@@ -23,6 +23,48 @@ discount:"₹"+0,
 grandTotal:"₹"+1200,
 }
 
+
+document.querySelector('.cardNumber').oninput=()=>{
+    document.querySelector('.cardnumberbox').innerText=document.querySelector('.cardNumber').value;
+
+}
+
+document.querySelector('.cardHolder').oninput=()=>{
+    document.querySelector('.cardholdername').innerText=document.querySelector('.cardHolder').value;
+
+}
+
+
+document.querySelector('.month-input').oninput=()=>{
+    document.querySelector('.expmonth').innerText=document.querySelector('.month-input').value;
+
+}
+
+document.querySelector('.yearinput').oninput=()=>{
+    document.querySelector('.expyear').innerText=document.querySelector('.yearinput').value;
+
+}
+
+document.querySelector('.cvvinput').onmouseenter=()=>{
+    document.querySelector('.front').style.transform='perspective(1000px)rotateY(-180deg)';
+
+    document.querySelector('.back').style.transform='perspective(1000px)rotateY(0deg)';
+}
+
+document.querySelector('.cvvinput').onmouseleave=()=>{
+    document.querySelector('.front').style.transform='perspective(1000px)rotateY(0deg)';
+
+    document.querySelector('.back').style.transform='perspective(1000px)rotateY(180deg)';
+}
+
+document.querySelector('.cvvinput').oninput=()=>{
+    document.querySelector('.cvvbox').innerText=document.querySelector('.cvvinput').value;
+}
+
+
+
+
+
 var pTopLeft=document.createElement("p");
 pTopLeft.innerText=calcObj.totalQuantity+" Items in your Bag";
 pTopLeft.setAttribute("id","pTopLeft");
@@ -123,3 +165,8 @@ var Unumber=document.getElementById("bl6");
 Unumber.innerText=addressObj.userNumber;
 
 
+
+
+
+
+//payment js

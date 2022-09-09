@@ -1,60 +1,99 @@
 
+
+@media screen and (max-width:769px) {
+    #navbar{
+        grid-template-columns: repeat(1,1fr);
+    }
+}
+@media screen and (max-width:300px){
+    #navbarHeading{
+    grid-template-columns: repeat(2,1fr);
+}
+}
+@media screen and (max-width:217px){
+    #navbarHeading{
+    grid-template-columns: repeat(1,1fr);
+}
+}
 body{
     background-color: rgb(243,243,243);
+}
+body::-webkit-scrollbar{
+    width: 5px;
+  background-color: rgb(243,243,243);
+}
+body::-webkit-scrollbar-thumb{
+    width: 5px;
+    background-color: rgb(109 106 106);
 }
 *{
     font-family:  sans-serif;
     font-size: 16px;  
 }
 #navbar{
-     margin-top:-6px ;
-     margin-left: -6px;
-     margin-right: -6px;
-    display: flex;
-    flex-wrap: wrap; 
-    background-color: white;
-    height: 80px;
-    box-shadow:  rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
-    cursor:default;
-     position: sticky; 
-     z-index: 37;
-    top: 0px;
+            
+    margin-top:-6px ;
+    margin-left: -6px;
+    margin-right: -6px;
+   display: grid;
+   grid-template-columns: 2fr 3fr 2fr;
+
+   background-color: white;
+   height: 10%;
+   
+   box-shadow:  rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
+   cursor:default;
+}
+#navbarHeading{
+   display:grid;
+   grid-template-columns:repeat(3,1fr);
+   
+}
+#navbarHeading >div{
+   width: 95%;
+}
+#navbar>div{
+   
+   width: 100%;
 }
 #logo{
-    width: 30%;
-    border-right:rgb(235,235,235) 1px solid ;
-    text-align: center;
-    margin-top: 3px;
-    margin-bottom: 3px;
+   width: 30%;
+   border-right:rgb(235,235,235) 1px solid ;
+   text-align: center;
+   margin-top: 3px;
+   margin-bottom: 3px;
 }
 #logo>img{
-    height: 35px;
-    margin-left: -20px;
-  margin-top: 20px; 
+   height: 35px;
+   margin-left: -20px;
+ margin-top: 20px; 
 }
-#logo~div{
+#navbarHeading>div{
+  
+   /* width: 15%; */
+   margin-top: 3px;
+  height: 95%;
+   border-right:rgb(235,235,235) 1px solid ;
+   padding-left: 5px;
+   padding-right: 5x;
+}
+
+#nav3{
+   border-bottom: rgb(252,39,121) 3px solid;
+}
+
+#navbar h5{
    
-    width: 15%;
-    margin-top: 3px;
-   height: 95%;
-    border-right:rgb(235,235,235) 1px solid ;
-    padding-left: 5px;
-    padding-right: 5x;
+   font-size: 16px;
+   text-transform: uppercase;
+   color: rgb(63,65,77);
+   
 }
-#navbar h5{ 
-    font-size: 16px;
-    text-transform: uppercase;
-    color: rgb(63,65,77);
-    
-}
-#current{
-    
-    border-bottom: rgb(252,39,121) 3px solid;
-}
-#current>h5{
+#navbar #nav3 h5{
     color:rgb(252,39,121) ;
+
     
-}
+ }
 .sticky{
     position:sticky;
     top : 0px;
@@ -70,7 +109,7 @@ body{
 .part1{
     height: 8%;
     width: 250px;
-    margin-left: 180px;
+    margin-left: 180px;margin-right: 10px;
     background-color: white;
     border-right:rgb(252,39,121) 3px solid ;
     box-shadow:  rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
@@ -80,97 +119,188 @@ body{
 }
 .part1>h6{
     margin-top:15px ;
-    margin-left: 20px;
+    margin-left: 15px;
     color:rgb(252,39,121)
   
 }
-.part2{
+ .part2 .containerhead{
+    height: 10%;
+    padding-top: 12px;
+   margin-bottom: 20px;
+    padding-left: 15px;
+    background-color: white;
     
-        width: 400px;
-        height:240px;
-       background-color: white;
-        padding: 15px;
-        margin-left: 10px;
-        
-      
+ }
+ .part2 .containerhead h6{
+    font-weight: bold;
+   margin-top: 0px;
+ }
+.container{    
+
+    min-height: 90vh;
+    height: 95%;
+    /* background: #eeee; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    padding-bottom: 60px;
+    outline: none;border: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    text-transform: uppercase;
+    z-index: 1;
 }
-      .heading{
-        width: 100%;
-        height: 40px;
-        border-bottom:  1px solid rgb(235,235,235);
-        box-sizing: border-box;
-       
-      }
-      .heading>h6{
-        font-size: 16px;
-        margin: auto;
-      }
-            #cvv {
-                display: flex;  
-                flex-wrap: wrap;
-                justify-content: center; 
-                padding-right: 20px;
-               
-            }
-            .one,.two,.one1{
-               
-                width: 60px;;
-                height:30px;
-                font-size: 16px;
-                border-bottom: 1px solid rgb(235,235,235);
-                
-            }
-            .one1{
-               margin-left: 3px;
-            }
-            #cvv div input{
-                width: 100%;
-                height: 80%;
-                box-sizing: border-box;
-                border: none;
-                padding-left: 10px;
-                margin-top: 3px;
-            }
-            .two>img{
-                height: 90px;
-                width: 90px;
-               margin-top: -30px;
-               margin-right: 5px;
-            }
-            #content{
-              
-                height:80px ;
-                margin-top: -12px;
-                margin-left: 8px;
-                width: 110px;
-            }
-            #content>p{
-                font-size: 18px;
-                margin-left: 15px;
-                margin-top: -5px;
-                color: rgb(144,145,158);
-            }
-            .cardnum>input{
-                width: 100%;
-                height: 40px;
-                font-size: 16px;
-                border: none;
-                border-bottom:  1px solid rgb(235,235,235);
-                box-sizing: border-box;
-            }
-            button{
-          border: none;
-          width: 100%;
-          height: 50px;
-          background-color: rgb(252,39,121);
-          color: white;
-          font-size: 16px;
-          font-weight: bold;
-          border-radius: 4px;
-            }
-            .p{
-                color: rgb(144,145,158);
-            }
+
+
+.container form{
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 10px 15px rgba(0,0,0,.2);
+    padding: 20px;
+    width: 600px;
+    padding-top: 160px;
+    box-sizing: border-box;
+    
+    
+}
+ .container form .inputBox{
+    margin-top: 20px;
+}
+.container form .inputBox span{
+    
+    display: block;
+    color: #999;
+    padding-bottom: 5px;
+
+}
+.container form .inputBox input,
+.container form .inputBox select{
+    box-sizing: border-box;
+    outline: none;border: none;
+    text-decoration: none;
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid rgba(0,0,0,.3);
+    color: #444;
+} 
+.container form .flexbox{
+    display: flex;
+    gap: 15px;
+}
+.container form .flexbox .inputBox{
+    flex: 1 1 150px;
+}
+.container form .submitbtn{
+    width: 100%;
+    background: linear-gradient(45deg, blueviolet,deeppink );
+    margin-top: 20px;
+    padding: 10px;
+    font-size: 20px;
+    color: #fff;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .2s linear;
+    
+}
+.container form .submitbtn:hover{
+    letter-spacing: 2px;
+    opacity: 0.8 ;
+}
+
+.container .cardcontainer{
+    padding: 20px;
+    margin-bottom: -130px;
+    position: relative;
+    height:150px;
+    width: 300px;
+}
+.container .cardcontainer .front{
+position: absolute;
+height: 100%;
+width: 100%;
+top: 0;
+left: 0;
+background: linear-gradient(45deg, blueviolet,deeppink);
+border-radius: 5px;
+backface-visibility: hidden;
+box-shadow: 0 15px 25px rgba(0,0,0,.2);
+padding: 20px;
+transition: transform .4s ease-out;
+}
+.container .cardcontainer .front .image{
+display: flex;
+align-items: center;
+justify-content:space-between;
+padding-top: 10px;
+}
+.container .cardcontainer .front .image img{
+    height: 50px;
+}
+.container .cardcontainer .front .cardnumberbox{
+    padding: 30px 0;
+    font-size: 22px;
+    color: #fff;
+    word-spacing: 1px;
+}
+.container .cardcontainer .front .flexbox{
+    display: flex;
+}
+.container .cardcontainer .front .flexbox .box:nth-child(1){
+    margin-right: auto;
+}
+.container .cardcontainer .front .flexbox .box{
+   font-size: 15px;
+   color: #fff;
+}
+.container .cardcontainer .back{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(45deg, blueviolet,deeppink);
+    border-radius: 5px;
+    padding: 20px 0;
+    text-align: right;
+    backface-visibility: hidden;
+    box-shadow: 0 15px 25px rgba(0,0,0,.2);
+   transform: perspective(1000px)rotateY(180deg);
+    transition: transform .4s ease-out;
+}
+.container .cardcontainer .back .stripe{
+    background: #000;
+    width: 100%;
+    margin: 10px 0;
+    height: 50px;
+}
+.container .cardcontainer .back .box{
+    padding: 0 20px;
+}
+.container .cardcontainer .back .box span{
+    color:#fff;
+    font-size: 15px;
+    /* margin-top: 5px;
+    color: #333;
+    background: #fff;
+    border-radius: 5px;
+    width: 100%; */
+}
+.container .cardcontainer .back .box .cvvbox{
+    height: 20px;
+    padding: 10px;
+    margin-top: 5px;
+
+    color: #333;
+    background: #fff;
+    border-radius: 5px;
+    width: 100%;
+}
+.container .cardcontainer .back .box img{
+    margin-top: 30px;
+    height: 30px;
+}
 .part3{
     width: 350px;
     height: 110%;
