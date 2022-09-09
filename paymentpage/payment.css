@@ -40,7 +40,7 @@ body::-webkit-scrollbar-thumb{
 
    background-color: white;
    height: 10%;
-   
+   z-index:5;
    box-shadow:  rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
    cursor:default;
 }
@@ -97,6 +97,7 @@ body::-webkit-scrollbar-thumb{
 .sticky{
     position:sticky;
     top : 0px;
+    z-index:10;
 }
 #container{
     display: flex;
@@ -137,7 +138,7 @@ body::-webkit-scrollbar-thumb{
  }
 .container{    
 
-    min-height: 90vh;
+    min-height: 100vh;
     height: 95%;
     /* background: #eeee; */
     display: flex;
@@ -149,19 +150,19 @@ body::-webkit-scrollbar-thumb{
     text-decoration: none;
     box-sizing: border-box;
     text-transform: uppercase;
-    z-index: 1;
+   
 }
 
 
 .container form{
     background: #fff;
     border-radius: 5px;
-    box-shadow: 0 10px 15px rgba(0,0,0,.2);
+    
     padding: 20px;
-    width: 600px;
+    width: 450px;
     padding-top: 160px;
     box-sizing: border-box;
-    
+    box-shadow:grey 0px 5px 15px; ;
     
 }
  .container form .inputBox{
@@ -202,7 +203,8 @@ body::-webkit-scrollbar-thumb{
     border-radius: 10px;
     cursor: pointer;
     transition: .2s linear;
-    
+    outline: none;
+    border: none;
 }
 .container form .submitbtn:hover{
     letter-spacing: 2px;
@@ -211,23 +213,27 @@ body::-webkit-scrollbar-thumb{
 
 .container .cardcontainer{
     padding: 20px;
-    margin-bottom: -130px;
+    margin-bottom: -100px;
     position: relative;
-    height:150px;
-    width: 300px;
+    height:110px;
+    width:300px;
+    padding-bottom:50px;
+    z-index:1;
 }
 .container .cardcontainer .front{
+margin-left:-15px;
 position: absolute;
 height: 100%;
 width: 100%;
 top: 0;
 left: 0;
-background: linear-gradient(45deg, blueviolet,deeppink);
+background: linear-gradient(45deg, rgb(86,86,86),rgb(71,71,71));
 border-radius: 5px;
 backface-visibility: hidden;
 box-shadow: 0 15px 25px rgba(0,0,0,.2);
 padding: 20px;
 transition: transform .4s ease-out;
+z-index:2;
 }
 .container .cardcontainer .front .image{
 display: flex;
@@ -242,7 +248,7 @@ padding-top: 10px;
     padding: 30px 0;
     font-size: 22px;
     color: #fff;
-    word-spacing: 1px;
+    letter-spacing: 2.5px;
 }
 .container .cardcontainer .front .flexbox{
     display: flex;
@@ -254,20 +260,24 @@ padding-top: 10px;
    font-size: 15px;
    color: #fff;
 }
+.cardcontainer .front .flexbox .box div{
+    margin-top: 5px;
+}
 .container .cardcontainer .back{
     position: absolute;
     top: 0;
     left: 0;
     height: 100%;
     width: 100%;
-    background: linear-gradient(45deg, blueviolet,deeppink);
+    background: linear-gradient(45deg, rgb(86,86,86),rgb(71,71,71));
     border-radius: 5px;
     padding: 20px 0;
     text-align: right;
     backface-visibility: hidden;
     box-shadow: 0 15px 25px rgba(0,0,0,.2);
-   transform: perspective(1000px)rotateY(180deg);
+    transform: perspective(1000px)rotateY(180deg);
     transition: transform .4s ease-out;
+    z-index:1;
 }
 .container .cardcontainer .back .stripe{
     background: #000;
@@ -298,7 +308,7 @@ padding-top: 10px;
     width: 100%;
 }
 .container .cardcontainer .back .box img{
-    margin-top: 30px;
+    margin-top: 10px;
     height: 30px;
 }
 .part3{
