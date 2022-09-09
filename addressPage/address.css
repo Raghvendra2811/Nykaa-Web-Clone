@@ -57,6 +57,7 @@ body{
 .sticky{
     position:sticky;
     top : 0px;
+    z-index:5;
 }
 #container{
     display: flex;
@@ -99,7 +100,7 @@ body{
     }
     form{
        position: relative;
-        z-index: 5;
+        z-index: 1;
     }
     #part2 input,#part2 select{
         padding: 10px 0;
