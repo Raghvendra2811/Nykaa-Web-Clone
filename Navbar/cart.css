@@ -2,8 +2,7 @@
   font-family: "Inter", sans-serif;
 }
 body {
-  display: grid;
-  justify-content: center;
+  
   /* align-content: space-around; */
   height: 100vh;
   margin: 0px;
@@ -314,7 +313,7 @@ body::-webkit-scrollbar-thumb {
   width:fit-content;
   margin-bottom: 5px;
   padding: 5px 0px;
-
+  outline: none;
 }
 #couponApply h3{
   text-align: center;
