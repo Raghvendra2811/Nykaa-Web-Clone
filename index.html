@@ -1,44 +1,25 @@
-<!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="allproducts.css" />
-    <link rel="stylesheet" href="../Navbar/navbar.css" />
-    <link rel="stylesheet" href="../footer/footer.css" />
-    <title>Buy Cosmetics Products &amp; Beauty Products Online in India at Best Price | Nykaa</title>
-    <link rel="icon" href="//www.nykaa.com/media/favicon/default/nykaa_favicon_a.png">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <link
+    rel="stylesheet"
+    href="https://unpkg.com/flickity@2/dist/flickity.min.css"
+    />
+    
+    <!--Swiper css-->
+    <link rel="stylesheet" href="css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="/Navbar/navbar.css" />
+    <link rel="stylesheet" href="/footer/footer.css" />
+    <link rel="stylesheet" href="/homepage/homePage.css" />
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
-      integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
+      href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
     />
-    <style>
-      .pagination {
-        display: inline-block;
-      }
-
-      .pagination span {
-        color: black;
-        float: left;
-        padding: 8px 16px;
-        text-decoration: none;
-        transition: background-color 0.3s;
-        border: 1px solid #ddd;
-      }
-
-      .pagination span .active {
-        background-color: #4caf50;
-        color: white;
-        border: 1px solid #4caf50;
-      }
-
-      .pagination span:hover:not(.active) {
-        background-color: #ddd;
-      }
-    </style>
   </head>
+
   <body>
     <div id="navbar">
       <header>
@@ -70,7 +51,7 @@
         </div>
       </header>
     </div>
-    <div id="subNavbar">
+    <div id="subNavbar" class="bgwhite">
       <i class="fa-solid fa-bars" id="menuBarResponsive"></i>
       <div id="categorySection">
         <img
@@ -309,7 +290,7 @@
 
     <!-- Category Bar -->
 
-    <div id="navbarCategoryBar">
+    <div id="navbarCategoryBar" class="bgwhite">
       <a href="..\allProducts\allProducts.html" id="makeup-click">Makeup</a>
       <a href="..\allProducts\allProducts.html" id="skin-click">Skin</a>
       <a href="..\allProducts\allProducts.html" id="hair-click">Hair</a>
@@ -325,115 +306,539 @@
         ><img src="https://nykaa.netlify.app/images/header/offers.png" alt=""
       /></a>
     </div>
-    <div id="allProductMain">
-      <div id="productcarousel">
-        <!-- Slideshow container -->
-        <div class="slideshow-container">
-          <!-- Full-width images with number and caption text -->
-          <div class="mySlides fade">
-            <img
-              src="https://images-static.nykaa.com/uploads/49631274-b682-46f9-b0ea-7c417ab6255b.jpg?tr=w-1200,cm-pad_resize"
-              style="width: 100%"
-            />
-          </div>
+    <div
+      class="slideshow-container"
+      style="max-width: 100%"
+      style="height: 150px"
+    >
+      <div class="mySlides fade">
+        <img
+          src="https://images-static.nykaa.com/uploads/a18ac2e3-3994-498a-8f44-b98e9576475f.jpg?tr=w-1200,cm-pad_resize"
+          style="width: 100%"
+        />
+      </div>
 
-          <div class="mySlides fade">
-            <img
-              src="https://images-static.nykaa.com/uploads/66fc6408-af20-4723-91f1-9dec05b50e5a.jpg?tr=w-1200,cm-pad_resize"
-              style="width: 100%"
-            />
-          </div>
+      <div class="mySlides fade">
+        <img
+          src="https://images-static.nykaa.com/uploads/e9bef2a9-62a3-453d-b328-0ec54a18fbab.gif?tr=w-1200,cm-pad_resize"
+          style="width: 100%"
+        />
+      </div>
 
-          <div class="mySlides fade">
-            <img
-              src="https://images-static.nykaa.com/uploads/f76f82a3-33ad-4384-b50e-622433d258a6.jpg?tr=w-1200,cm-pad_resize"
-              style="width: 100%"
-            />
-          </div>
+      <div class="mySlides fade">
+        <img
+          src="https://images-static.nykaa.com/uploads/60910dd0-23c2-4dcd-b13c-258d648118a7.jpg?tr=w-1200,cm-pad_resize"
+          style="width: 100%"
+        />
+      </div>
 
-          <!-- Next and previous buttons -->
-          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-          <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      <div class="mySlides fade">
+        <img
+          src="https://images-static.nykaa.com/uploads/6d279214-6811-44f6-97bc-94b82e101cf2.jpg?tr=w-1200,cm-pad_resize"
+          style="width: 100%"
+        />
+      </div>
+
+      <div class="mySlides fade">
+        <img
+          src="https://images-static.nykaa.com/uploads/60910dd0-23c2-4dcd-b13c-258d648118a7.jpg?tr=w-1200,cm-pad_resize"
+          style="width: 100%"
+        />
+      </div>
+
+      <div class="mySlides fade">
+        <img
+          src="https://images-static.nykaa.com/uploads/4067ba8b-5681-4a3a-b39d-f3b468959006.jpg?tr=w-1200,cm-pad_resize"
+          style="width: 100%"
+        />
+      </div>
+
+      <div class="mySlides fade">
+        <img
+          src="https://images-static.nykaa.com/uploads/9968775e-e487-4ea4-a8f6-866ed0875262.jpg?tr=w-1200,cm-pad_resize"
+          style="width: 100%"
+        />
+      </div>
+      <!--prev-->
+
+      <a class="prev" onclick="plusSlides(-1)">❮</a>
+      <a class="next" onclick="plusSlides(1)">❯</a>
+    </div>
+    <br />
+
+    <div style="text-align: center">
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+    </div>
+
+    <script>
+      let slideIndex = 0;
+      showSlides();
+
+      function showSlides() {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        let dots = document.getElementsByClassName("dot");
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {
+          slideIndex = 1;
+        }
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+        setTimeout(showSlides, 2000); // Change image every 2 seconds
+      }
+    </script>
+    <!--section2-->
+    <br />
+    <img
+      class="luxe"
+      src="https://images-static.nykaa.com/uploads/c26e921e-ce90-428a-9a82-52d2e785dbe4.gif?tr=w-1200,cm-pad_resize"
+    />
+    <h2>CATEGORIES IN FOCUS</h2>
+
+    <div class="carousel" data-flickity='{"wrapAround": true }'>
+      <div class="carousel-cell">
+        <img
+          class="w3-image"
+          src="https://images-static.nykaa.com/uploads/8858f425-8d47-49f7-a97f-63072c31e9ec.gif?tr=w-1200,cm-pad_resize"
+        />
+      </div>
+
+      <div class="carousel-cell">
+        <img
+          class="w3-image"
+          src="https://images-static.nykaa.com/uploads/1bbbc5dc-66eb-45e0-8f9a-dc9891244db2.jpg?tr=w-1200,cm-pad_resize"
+        />
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+
+    <h2>BUYING GUIDES</h2>
+    <div class="carousel" data-flickity='{"wrapAround": true }'>
+      <div class="carousel-celll">
+        <img
+          class="w3-image"
+          src="https://images-static.nykaa.com/uploads/be5e2237-abe2-4fba-810d-d3780ea32298.jpg?tr=w-600,cm-pad_resize"
+        />
+      </div>
+
+      <div class="carousel-celll">
+        <img
+          class="w3-image"
+          src="https://images-static.nykaa.com/uploads/5138a158-f52b-4ad4-8491-1b509064d50d.jpg?tr=w-600,cm-pad_resize"
+        />
+      </div>
+      <div class="carousel-celll">
+        <img
+          class="w3-image"
+          src="https://images-static.nykaa.com/uploads/eb443c86-d5db-44cc-9de9-fc19296f041f.gif?tr=w-600,cm-pad_resize"
+        />
+      </div>
+
+      <div class="carousel-celll">
+        <img
+          class="w3-image"
+          src="https://images-static.nykaa.com/uploads/eb443c86-d5db-44cc-9de9-fc19296f041f.gif?tr=w-600,cm-pad_resize"
+        />
+      </div>
+      <div class="carousel-celll">
+        <img
+          class="w3-image"
+          src="https://images-static.nykaa.com/uploads/4b6c9b39-6bd4-41e3-a5fe-51191567ebac.gif?tr=w-600,cm-pad_resize"
+        />
+      </div>
+
+      <div class="carousel-celll">
+        <img
+          class="w3-image"
+          src="https://images-static.nykaa.com/uploads/459133c7-5daf-428f-a1e8-2a9913233b5e.gif?tr=w-600,cm-pad_resize"
+        />
+      </div>
+      <div class="carousel-celll">
+        <img
+          class="w3-image"
+          src="https://images-static.nykaa.com/uploads/ffc690c4-0628-49ce-8f06-3365fdaeacbf.jpg?tr=w-600,cm-pad_resize"
+        />
+      </div>
+
+      <div class="carousel-celll">
+        <img
+          class="w3-image"
+          src="https://images-static.nykaa.com/uploads/767840b7-9e77-4eb6-9b77-e7bb17d06fc4.gif?tr=w-600,cm-pad_resize"
+        />
+      </div>
+    </div>
+
+    <!--new sec-->
+    <h2>EDITORS CHOICE</h2>
+    <div class="carousela" data-flickity='{"wrapAround": true }'>
+      <div class="carousel-a">
+        <img
+          class="w3-image"
+          src="https://images-static.nykaa.com/uploads/09f63a58-a1ae-4713-8c85-1cf79250ce14.jpg?tr=w-300,cm-pad_resize"
+        />
+      </div>
+
+      <div class="carousel-a">
+        <img
+          class="w3-image"
+          src="https://images-static.nykaa.com/uploads/c6c146de-a2d5-44ec-a35d-82b7aec41b07.jpg?tr=w-300,cm-pad_resize"
+        />
+      </div>
+      <div class="carousel-a">
+        <img
+          class="w3-image"
+          src="https://images-static.nykaa.com/uploads/49316cbf-c83e-462d-b649-ee3e0c3dca22.jpg?tr=w-300,cm-pad_resize"
+        />
+      </div>
+      <div class="carousel-a">
+        <img
+          class="w3-image"
+          src="https://images-static.nykaa.com/uploads/5bf85b1d-63cb-411c-a5a3-f7a42e303e96.jpg?tr=w-300,cm-pad_resize"
+        />
+      </div>
+      <div class="carousel-a">
+        <img
+          class="w3-image"
+          src="https://images-static.nykaa.com/uploads/0e4bdc3b-da4e-4846-a203-767d8d2ddaf2.jpg?tr=w-300,cm-pad_resize"
+        />
+      </div>
+      <div class="carousel-a">
+        <img
+          class="w3-image"
+          src="https://images-static.nykaa.com/uploads/49316cbf-c83e-462d-b649-ee3e0c3dca22.jpg?tr=w-300,cm-pad_resize"
+        />
+      </div>
+    </div>
+
+    <!-- section 3-->
+
+    <img
+      class="imgsec3"
+      src="https://images-static.nykaa.com/uploads/f091c144-5551-4131-b8e9-9d884e9cc7a8.gif?tr=w-1200,cm-pad_resize"
+    />
+    <!--section 4-->
+    <!--Nakyaa Box Models Section-->
+    <div class="grandbox">
+      <h2 class="beech">TOP BRANDS</h2>
+      <div class="parentbox1">
+        <!--Top Brands-->
+        <div>
+          <img
+            src="https://images-static.nykaa.com/uploads/e3ed52b7-b473-40fa-86e4-040f48282806.jpg?tr=w-600,cm-pad_resize"
+            alt="img"
+          />
+          <div>
+            <p class="pinkc">Buy 2 Get 1 FREE</p>
+            <p class="gracy">Upto 20% On Combos</p>
+          </div>
         </div>
-        <br />
+        <div>
+          <img
+            src="https://images-static.nykaa.com/uploads/842b28c2-b36c-4fa4-9b57-c24d08b4f82a.gif?tr=w-600,cm-pad_resize"
+            alt="img"
+          />
+          <div>
+            <p class="pinkc">Pick 4 Gifts</p>
+            <p class="gracy">Above Rs.3500</p>
+          </div>
+        </div>
+        <div>
+          <img
+            src="https://images-static.nykaa.com/uploads/1bf3570a-12c9-496c-80e6-e3413919a71e.gif?tr=w-600,cm-pad_resize"
+            alt="img"
+          />
+          <div>
+            <p class="pinkc">Upto 30% Off</p>
+            <p class="gracy">Additional 10%</p>
+          </div>
+        </div>
+        <div>
+          <img
+            src="https://images-static.nykaa.com/uploads/f46c42cd-29ad-4afb-b5bd-ff23475f45ea.gif?tr=w-600,cm-pad_resize"
+            alt="img"
+          />
+          <div>
+            <p class="pinkc">Longwear Goes Shiny</p>
+            <p class="gracy">Upto 35% Off</p>
+          </div>
+        </div>
+        <div>
+          <img
+            src="https://images-static.nykaa.com/uploads/de6fae6a-74db-46fc-a2cd-91ad077ae3f0.jpg?tr=w-600,cm-pad_resize"
+            alt="img"
+          />
+          <div>
+            <p class="pinkc">Upto 33% Off</p>
+            <p class="gracy">On Entire Range</p>
+          </div>
+        </div>
+        <div>
+          <img
+            src="https://images-static.nykaa.com/uploads/131f72f2-363b-4431-9083-d6b9088bb586.gif?tr=w-600,cm-pad_resize"
+            alt="img"
+          />
+          <div>
+            <p class="pinkc">50% Off + Free Serum</p>
+            <p class="gracy">On Order Over 799</p>
+          </div>
+        </div>
+        <div>
+          <img
+            src="https://images-static.nykaa.com/uploads/6ff389a5-bf1b-4d32-84bc-dcce78567f9a.gif?tr=w-600,cm-pad_resize"
+            alt="img"
+          />
+          <div>
+            <p class="pinkc">Upto 35% Off</p>
+            <p class="gracy">You're Worth It!</p>
+          </div>
+        </div>
+        <div>
+          <img
+            src="https://images-static.nykaa.com/uploads/e351b3bc-e171-4897-a7a6-5b70309838d2.png?tr=w-600,cm-pad_resize"
+            alt="img"
+          />
+          <div>
+            <p class="pinkc">Scent At A Time</p>
+            <p class="gracy">25% Off On Bestsellers</p>
+          </div>
+        </div>
+        <!--End of Top brands-->
+      </div>
+      <!--section 5-->
+      <img
+        class="imgsec5"
+        src="https://images-static.nykaa.com/uploads/ea8b06f4-c904-462b-b47d-19a932bee718.gif?tr=w-1200,cm-pad_resize"
+      />
 
-        <!-- The dots/circles -->
-        <div style="text-align: center">
-          <span class="dot" onclick="currentSlide(1)"></span>
-          <span class="dot" onclick="currentSlide(2)"></span>
-          <span class="dot" onclick="currentSlide(3)"></span>
+      <h2 class="beech">ONLY AT NYKAA</h2>
+      <div class="parentbox2">
+        <!--Only at naykaa-->
+
+        <div>
+          <img
+            src="https://images-static.nykaa.com/uploads/220b4f6c-5b70-4981-bedd-d35d4f861eba.jpg?tr=w-600,cm-pad_resize"
+            alt="img"
+          />
+          <div>
+            <p class="pinkc">Upto 30% Off</p>
+            <p class="gracy">Worth Rs. 599</p>
+          </div>
+        </div>
+
+        <div>
+          <img
+            src="https://images-static.nykaa.com/uploads/eb35e819-fc4c-4a5f-a2c2-2e6f0cfb3151.gif?tr=w-600,cm-pad_resize"
+            alt="img"
+          />
+          <div>
+            <p class="pinkc">2 Bestseller Minis</p>
+            <p class="gracy">On All Orders!</p>
+          </div>
+        </div>
+
+        <div>
+          <img
+            src="https://images-static.nykaa.com/uploads/a5bec3e0-838b-4b1d-a59a-e6db910e83b4.gif?tr=w-600,cm-pad_resize"
+            alt="img"
+          />
+          <div>
+            <p class="pinkc">On Rs.5000: Get</p>
+            <p class="gracy">Mini Matte Lipstick</p>
+          </div>
+        </div>
+
+        <div>
+          <img
+            src="https://images-static.nykaa.com/uploads/a2770ce7-cad1-4be6-9d81-1b94a4f8296c.jpg?tr=w-600,cm-pad_resize"
+            alt="img"
+          />
+          <div>
+            <p class="pinkc">Buy 5 Get 5 Buy</p>
+            <p class="gracy">Spot Patches</p>
+          </div>
+        </div>
+        <!--End of only at naykaa-->
+      </div>
+    </div>
+    <!-- Different Box Models Section-->
+    <div class="f">
+      <h2>FEATURED BRANDS</h2>
+      <div class="f1">
+        <div>
+          <img
+            src="https://images-static.nykaa.com/uploads/1513a510-f0c0-49a8-be49-31f1615e303e.gif?tr=w-300,cm-pad_resize"
+            alt="img"
+          />
+          <div>
+            <p class="pinkc">Flat 20% Off</p>
+            <p class="gracy">Serum Worth 799</p>
+          </div>
+        </div>
+        <div>
+          <img
+            src="https://images-static.nykaa.com/uploads/ae314ecd-0618-43b8-ac4b-3596a22d006d.jpg?tr=w-300,cm-pad_resize"
+            alt="img"
+          />
+          <div>
+            <p class="pinkc">Pick 4 Gifts</p>
+            <p class="gracy">On Above Rs.3500</p>
+          </div>
+        </div>
+        <div>
+          <img
+            src="https://images-static.nykaa.com/uploads/e1e7c78a-9fa5-4eef-a20c-96219b511777.gif?tr=w-300,cm-pad_resize"
+            alt="img"
+          />
+          <div>
+            <p class="pinkc">Upto 50% Off</p>
+            <p class="gracy">Over Rs. 799</p>
+          </div>
+        </div>
+        <div>
+          <img
+            src="https://images-static.nykaa.com/uploads/058e2e03-66b4-4583-828c-769f0c06e964.jpg?tr=w-300,cm-pad_resize"
+            alt="img"
+          />
+          <div>
+            <p class="pinkc">Upto 25% Off</p>
+            <p class="gracy">On Entire Range</p>
+          </div>
+        </div>
+        <div>
+          <img
+            src="https://images-static.nykaa.com/uploads/a80bc586-7e87-4586-98c2-5861b23a6951.jpg?tr=w-300,cm-pad_resize"
+            alt="img"
+          />
+          <div>
+            <p class="pinkc">Upto 20% Off</p>
+            <p class="gracy">On Entire Range</p>
+          </div>
+        </div>
+        <div>
+          <img
+            src="https://images-static.nykaa.com/uploads/1236b09e-d782-427b-9588-3508c3e1b105.jpg?tr=w-300,cm-pad_resize"
+            alt="img"
+          />
+          <div>
+            <p class="pinkc">Upto 20% Off</p>
+            <p class="gracy">Free Lipstick On ₹599+</p>
+          </div>
+        </div>
+        <div>
+          <img
+            src="https://images-static.nykaa.com/uploads/9f613063-436a-4916-b525-b1141721427a.gif?tr=w-300,cm-pad_resize"
+            alt="img"
+          />
+          <div>
+            <p class="pinkc">Flat 10% Off +</p>
+            <p class="gracy">Buy 1 Get 1</p>
+          </div>
+        </div>
+        <div>
+          <img
+            src="https://images-static.nykaa.com/uploads/1d15f4f5-f421-4281-8138-4974fbbd4d9e.gif?tr=w-300,cm-pad_resize"
+            alt="img"
+          />
+          <div>
+            <p class="pinkc">Upto 20% Off</p>
+            <p class="gracy">On Entire Range</p>
+          </div>
         </div>
       </div>
-      <div id="filter-product">
-        <div class="stickyClass" id="filter-box">
-          <div id="sort-top">
-            <button type="button" class="collapsible">
-              <span class="bagwhite">Sort By: </span
-              ><span class="bagwhite"
-                ><i class="fa-solid fa-arrow-down bgwhite"></i
-              ></span>
-            </button>
-            <div class="content">
-              <div class="dropdown" id="HtoL">High to low</div>
-              <div class="dropdown" id="LtoH">Low to High</div>
-              <div class="dropdown">Popularity</div>
-              <div class="dropdown">Discount</div>
-            </div>
-          </div>
 
-          <div id="filter-Top">
-            <button type="button" class="collapsible1">
-              <span class="bagwhite">Category </span
-              ><span class="bagwhite"
-                ><i class="fa-solid fa-arrow-down bgwhite"></i
-              ></span>
-            </button>
-            <button type="button" class="collapsible1">
-              <span class="bagwhite">Brand </span
-              ><span class="bagwhite"
-                ><i class="fa-solid fa-arrow-down bgwhite"></i
-              ></span>
-            </button>
-            <button type="button" class="collapsible1">
-              <span class="bagwhite">Discount </span
-              ><span class="bagwhite"
-                ><i class="fa-solid fa-arrow-down bgwhite"></i
-              ></span>
-            </button>
-            <button type="button" class="collapsible1">
-              <span class="bagwhite">Gender </span
-              ><span class="bagwhite"
-                ><i class="fa-solid fa-arrow-down bgwhite"></i
-              ></span>
-            </button>
-            <button type="button" class="collapsible1">
-              <span class="bagwhite">Preference </span
-              ><span class="bagwhite"
-                ><i class="fa-solid fa-arrow-down bgwhite"></i
-              ></span>
-            </button>
+      <div class="parentbox3">
+        <!--Box after futured brands-->
+        <div>
+          <img
+            src="https://images-static.nykaa.com/uploads/4d7ab084-0a44-4616-9570-10b041f17545.gif?tr=w-600,cm-pad_resize"
+            alt=""
+          />
+          <div>
+            <p class="pinkc">Get 3 Free Gifts!</p>
           </div>
         </div>
-        <div class="products"></div>
-      </div>
-      <div id="sticky-box">
-        <div id="1sticky-box">
-          <button type="button" class="collapsible">
-            <span class="bagwhite">Sort By: </span
-            ><span class="bagwhite"
-              ><i class="fa-solid fa-arrow-down bgwhite"></i
-            ></span>
-          </button>
-          <div class="content">
-            <div class="dropdown" id="HtoL1">High to low</div>
-            <div class="dropdown" id="LtoH1">Low to High</div>
-            <div class="dropdown">Popularity</div>
-            <div class="dropdown">Discount</div>
+
+        <div>
+          <img
+            src="https://images-static.nykaa.com/uploads/29c46c2f-299c-4d8b-8ab9-7487fb4cd1a6.jpg?tr=w-600,cm-pad_resize"
+            alt=""
+          />
+          <div>
+            <p class="pinkc">Of On Orders Of Rs. 399+</p>
           </div>
+        </div>
+        <!--End of random-->
+      </div>
+      <h2 class="beech">POP UP STORES</h2>
+      <div class="parentbox4">
+        <!--Pop Up stores-->
+
+        <div>
+          <img
+            src="https://images-static.nykaa.com/uploads/df3a3375-5cff-4c4b-8a4b-12af4f136ef4.gif?tr=w-600,cm-pad_resize"
+            alt="img"
+          />
+        </div>
+
+        <div>
+          <img
+            src="https://images-static.nykaa.com/uploads/7d962482-fbb6-4c74-bed8-6772dbd54d01.jpg?tr=w-600,cm-pad_resize"
+            alt="img"
+          />
+        </div>
+        <!--End of pop up-->
+      </div>
+      <h2 class="beech">SPECIAL CURATIONS</h2>
+      <div class="parentbox5">
+        <!--Special Cautions-->
+
+        <div>
+          <img
+            src="https://images-static.nykaa.com/uploads/b3dbf78f-e2a3-454d-88d7-3d3e7557b7f5.gif?tr=w-600,cm-pad_resize"
+            alt="img"
+          />
+        </div>
+        <div>
+          <img
+            src="https://images-static.nykaa.com/uploads/0767a3b8-61ec-43b0-901b-76ae5563fdb8.png?tr=w-600,cm-pad_resize"
+            alt="img"
+          />
+        </div>
+        <!--End of-->
+      </div>
+      <h2 class="beech">BEAUTY ADVICE</h2>
+      <div class="parentbox6">
+        <div>
+          <img
+            src="https://images-static.nykaa.com/uploads/e6ae051f-56e7-4079-93e4-b844af6e1d49.jpg?tr=w-600,cm-pad_resize"
+            alt="img"
+          />
+        </div>
+        <div>
+          <img
+            src="https://images-static.nykaa.com/uploads/3a5755d8-450a-44cc-9246-c01b592eebcf.jpg?tr=w-600,cm-pad_resize"
+            alt="img"
+          />
         </div>
       </div>
     </div>
-    <div class="pagination"></div>
+    <img
+      class="last"
+      src="https://images-static.nykaa.com/uploads/58c1c0b0-5a0b-4614-acfc-3205e669d8a7.jpg?tr=w-1200,cm-pad_resize"
+    />
     <footer class="footer1">
       <div id="firstfootercontainer" class="container">
         <div class="contactRow">
@@ -585,48 +990,14 @@
       </div>
       <div></div>
     </footer>
-    <script type="module" src="allProducts.js"></script>
-    <script type="module" src="data.js"></script>
-    <script
-      src="https://kit.fontawesome.com/7f18e98467.js"
-      crossorigin="anonymous"
-    ></script>
-    <script>
-      let slideIndex = 1;
-      showSlides(slideIndex);
-
-      function plusSlides(n) {
-        showSlides((slideIndex += n));
-      }
-
-      function currentSlide(n) {
-        showSlides((slideIndex = n));
-      }
-
-      function showSlides(n) {
-        let i;
-        let slides = document.getElementsByClassName("mySlides");
-        let dots = document.getElementsByClassName("dot");
-        if (n > slides.length) {
-          slideIndex = 1;
-        }
-        if (n < 1) {
-          slideIndex = slides.length;
-        }
-        for (i = 0; i < slides.length; i++) {
-          slides[i].style.display = "none";
-        }
-        for (i = 0; i < dots.length; i++) {
-          dots[i].className = dots[i].className.replace(" active", "");
-        }
-        slides[slideIndex - 1].style.display = "block";
-        dots[slideIndex - 1].className += " active";
-      }
-    </script>
   </body>
+  <!--Swiper js-->
+  <!-- <script src="js/swiper-bundle.min.js"> </script> -->
+  <script src="js/script.js"></script>
 </html>
-<script src="../Navbar/navbar.js"></script>
+
 <script
   src="https://kit.fontawesome.com/a103610109.js"
   crossorigin="anonymous"
 ></script>
+<script src="../Navbar/navbar.js"></script>

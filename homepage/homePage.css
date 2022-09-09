@@ -266,7 +266,7 @@ body {
 
 body {
   font-family: Inter, Roboto, Arial, sans-serif;
-  background-color: rgb(243, 243, 243);
+  /* background-color: rgb(243, 243, 243); */
 }
 html {
   line-height: 1.15;
@@ -306,7 +306,7 @@ h2 {
 
 body {
   font-family: Inter, sans-serif;
-  background-color: rgb(243, 243, 243);
+  /* background-color: rgb(243, 243, 243); */
 }
 /* html {
   line-height: 0.8;
@@ -402,9 +402,9 @@ img:hover {
 .trending {
   width: 100%;
 }
-.beech {
-  /* margin: 15px; */
-}
+/* .beech {
+  /* margin: 15px; 
+} */
 .parentbox4 {
   width: 100%;
   display: grid;
@@ -474,6 +474,11 @@ img:hover {
 .f1 > div {
   width: 100%;
 }
+
+.bgwhite {
+  background-color: white;
+}
+
 @media screen and (max-width: 1000px) {
   .f1 {
     grid-template-columns: repeat(3, 1fr);
@@ -502,4 +507,10 @@ img:hover {
   .f1 {
     grid-template-columns: repeat(1, 1fr);
   }
+}
+
+header > h3 {
+  margin: auto;
+  font-size: 18px;
+  font-weight: bolder;
 }

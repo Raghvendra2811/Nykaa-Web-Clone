@@ -32,7 +32,7 @@ function displayProducts(products) {
     let discountAmt = document.createElement("p");
     let actualAmt = document.createElement("h4");
 
-    prodcutimg.setAttribute("src", elem.image_url);
+    prodcutimg.setAttribute("src", elem.image);
     productName.innerText = elem.name;
     deleteIcon.innerHTML = '<i class="fa-solid fa-trash"></i>';
     qtyDiv.innerHTML =
@@ -54,6 +54,11 @@ function displayProducts(products) {
     amountDiv.append(qtyDiv, priceDiv);
     amountDiv.setAttribute("class", "amountdiv");
     productDiv.append(productDescription, amountDiv);
+    // productDiv.setAttribute("src", "../allProducts/products.html");
+    productDiv.setAttribute("target", "_partent");
+    productDiv.addEventListener("click", function () {
+      showProductMain(elem);
+    });
     document.getElementById("products").append(productDiv);
     productDiv.setAttribute("class", "productDiv");
     qtyDiv.setAttribute("class", "qtyDiv");
@@ -78,6 +83,11 @@ function displayProducts(products) {
     document.getElementById("grandTotal").innerText =
       document.getElementById("total").innerText;
   });
+}
+
+function showProductMain() {
+  // window.location.href = "../allProducts/product.html";
+  // localStorage.setItem("specificProduct", elem);
 }
 
 function getShipping(arr) {

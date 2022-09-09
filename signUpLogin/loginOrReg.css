@@ -1,56 +1,57 @@
-body{
-    height: 600px;
-    margin-top: 65px;
-    background-color:#F3F3F3;
+body {
+  height: 600px;
+  margin-top: 65px;
+  background-color: #f3f3f3;
 }
-#parent{
-    width: 23%;
-    height: 100%;
-    margin: auto;
-    border-radius: 20px;
-    background-color: white;
-    border: 1px solid silver;
-    
+#parent {
+  width: 23%;
+  height: 100%;
+  margin: auto;
+  border-radius: 20px;
+  background-color: white;
+  border: 1px solid silver;
 }
-div p{
-    text-align: center;
-    margin-top: -5px;
-    margin-left: 12px;
-    padding-bottom: 20px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-weight: 500px;
-    border-bottom: 1px solid silver;
+div p {
+  text-align: center;
+  margin-top: -5px;
+  margin-left: 12px;
+  padding-bottom: 20px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 500px;
+  border-bottom: 1px solid silver;
 }
 /* input{
     margin: 25%
 } */
-#parent :nth-child(1) p{
-    padding-top: 40px;
+#parent :nth-child(1) p {
+  padding-top: 40px;
 }
-#parent div{
-    height: 10%;
-    width: 296px;
-    padding-left: 10px;
-    padding-right: 0px;
+#parent div {
+  height: 10%;
+  width: 296px;
+  padding-left: 10px;
+  padding-right: 0px;
 }
-input{
-    width: 280px;
-    padding: 12px;
-    margin-top: 28px;
-    text-align: center;
-    background-color:#F3F3F3;
-    border: 1px solid crimson;
-    margin-left: 4px;
-    /* margin-right: 10px; */
+input {
+  width: 280px;
+  padding: 12px;
+  margin-top: 28px;
+  text-align: center;
+  background-color: #f3f3f3;
+  border: 1px solid crimson;
+  margin-left: 4px;
+  /* margin-right: 10px; */
 }
-div button{
-width: 296px;
-margin-top: 250px;
-text-align: center;
-padding: 10px;
-font-size: 18px;
-background-color: #FC2779;
-border: #FC2779;
-color: white;
-margin-left: 8px;
+div button {
+  width: 296px;
+  margin-top: 250px;
+  text-align: center;
+  padding: 10px;
+  font-size: 18px;
+  background-color: #fc2779;
+  border: #fc2779;
+  color: white;
+  margin-left: 8px;
+  /* display: grid;
+  align-content: center; */
 }

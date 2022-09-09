@@ -1,64 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login Page</title>
-    <link rel="stylesheet" href="loginPage.css">
-</head>
-<body>
+    <link rel="stylesheet" href="loginPage.css" />
+  </head>
+  <body>
     <div class="center">
-        <p>LOGIN</p>
-        <div>
-            Welcome back
-            <span id="name"></span>,
-            <!-- <p>Welcome back <span id="name"></span> ,Please enter your password to continue</p> -->
+      <p>LOGIN</p>
+      <div>
+        Welcome back
+        <span id="name"></span>,
+        <!-- <p>Welcome back <span id="name"></span> ,Please enter your password to continue</p> -->
+      </div>
+      <div>Please enter your password to continue</div>
+      <form method="post">
+        <div class="txt_field">
+          <input id="pass" type="password" required />
+          <span></span>
+          <label id="pass">Password</label>
         </div>
-        <div>Please enter your password to continue</div>
-        <form method="post">
-            <div class="txt_field">
-                <input id="pass" type="password" required/>
-                <span></span>
-                <label id="pass">Password</label>
-            </div>
-            <input id="submit" type="button" value="LOGIN"/>
-            <div>SEND OTP TO EMAIL</div>
-        </form>
+        <input id="submit" type="button" value="LOGIN" />
+        <div>SEND OTP TO EMAIL</div>
+      </form>
     </div>
-</body>
+  </body>
 </html>
 
 <script>
-    var id = localStorage.getItem("registeredId") || "";
-    var existingUsers = JSON.parse(localStorage.getItem("userDetails")) || [];
+  var id = localStorage.getItem("registeredId") || "";
+  var existingUsers = JSON.parse(localStorage.getItem("userDetails")) || [];
 
-    var currUser = existingUsers.filter(function(el){
-        return el.userEmail == id;
-    });
+  var currUser = existingUsers.filter(function (el) {
+    return el.userEmail == id;
+  });
 
-    document.getElementById("name").innerText=currUser[0].userName;
+  document.getElementById("name").innerText = currUser[0].userName;
 
-    document.getElementById("submit").addEventListener("click", function(){
+  document.getElementById("submit").addEventListener("click", function () {
+    var pass = document.getElementById("pass").value;
 
-        var pass = document.getElementById("pass").value;
-        
-        var currPass;
-        for(var i=0; i<existingUsers.length; i++){
-            if(existingUsers[i].userEmail===id){
-                currPass=existingUsers[i].userPass;
-                break;
-            }
-        }
+    var currPass;
+    var currName;
+    for (var i = 0; i < existingUsers.length; i++) {
+      if (existingUsers[i].userEmail === id) {
+        currPass = existingUsers[i].userPass;
+        currName = existingUsers[i].userName;
+        localStorage.setItem("userName", currName);
+        break;
+      }
+    }
 
-        if(pass===currPass){
-            // home page
-            window.location.href="./homePage.html";
-        }else{
-            alert("Wrong Password");
-            document.getElementById("pass").value="";
-        }
-
-    });
+    if (pass === currPass) {
+      // home page
+      window.location.href = "../index.html";
+    } else {
+      alert("Wrong Password");
+      document.getElementById("pass").value = "";
+    }
+  });
 </script>
-

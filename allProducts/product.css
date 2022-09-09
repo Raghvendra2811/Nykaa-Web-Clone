@@ -1,8 +1,13 @@
 * {
   margin: 0px;
   padding: 0px;
-  background-color: rgb(243, 243, 243);
+  
   font-family: Inter, Roboto, Arial, sans-serif;
+}
+#main-Product-Page{
+  background-color: rgb(243, 243, 243);
+  /* margin-top: 200px; */
+  padding-top: 20px;
 }
 #productDetail {
   width: 70%;

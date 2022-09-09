@@ -1,6 +1,6 @@
 var allProducts = JSON.parse(localStorage.getItem("allProducts"));
 
-var categoryvariable = "#";
+var categoryvariable = localStorage.getItem("categoryvariable") || "#";
 var currentPage = 1;
 var currentNum = 1;
 console.log("current", currentNum);
@@ -70,14 +70,8 @@ function display(displayArray, n, currentPage) {
     priceDiv.append(mrp, strikedPrice, price, discount);
     var ratingDiv = document.createElement("div");
     ratingDiv.setAttribute("class", "ratingDiv bagwhite");
-    ratingDiv.innerHTML = '  <span id="review" class="bgwhite"><i class="fa fa-star bgwhite" aria-hidden="true"></i><i class="fa fa-star bgwhite" aria-hidden="true"></i><i class="fa fa-star bgwhite" aria-hidden="true"></i><i class="fa fa-star bgwhite" aria-hidden="true"></i><i class="fa fa-star-half-o bgwhite" aria-hidden="true"></i>4.2/5</span>';
-
-
-
-
-
-
-
+    ratingDiv.innerHTML =
+      '  <span id="review" class="bgwhite"><i class="fa fa-star bgwhite" aria-hidden="true"></i><i class="fa fa-star bgwhite" aria-hidden="true"></i><i class="fa fa-star bgwhite" aria-hidden="true"></i><i class="fa fa-star bgwhite" aria-hidden="true"></i><i class="fa fa-star-half-o bgwhite" aria-hidden="true"></i>4.2/5</span>';
 
     var extraGift = document.createElement("div");
     extraGift.setAttribute("class", "extraGift bagwhite");

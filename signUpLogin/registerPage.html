@@ -1,69 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Register Page</title>
-    <link rel="stylesheet" href="registerPage.css">
-</head>
-<body>
+    <link rel="stylesheet" href="registerPage.css" />
+  </head>
+  <body>
     <div class="center">
-        <p>REGISTER</p>
-        <p>Register to Earn <span>2000  Reward Points!</span></p>
-        <form method="post">
-            <div class="txt_field">
-                <input id="user" type="text" required/>
-                <span></span>
-                <label>Name</label>
-            </div>
-            <div class="txt_field">
-                <input id="phone" type="number" required/>
-                <span></span>
-                <label>Phone Number</label>
-            </div>
-            <div class="txt_field">
-                <input id="email" type="text" required/>
-                <span></span>
-                <label id="email">Email Address</label>
-            </div>
-            <div class="txt_field">
-                <input id="pass" type="password" required/>
-                <span></span>
-                <label id="pass"> Create Password</label>
-            </div>
-            <input id="submit" type="submit" value="REGISTER"/>
-        </form>
+      <p>REGISTER</p>
+      <p>Register to Earn <span>2000 Reward Points!</span></p>
+      <form method="post">
+        <div class="txt_field">
+          <input id="user" type="text" required />
+          <span></span>
+          <label>Name</label>
+        </div>
+        <div class="txt_field">
+          <input id="phone" type="number" required />
+          <span></span>
+          <label>Phone Number</label>
+        </div>
+        <div class="txt_field">
+          <input id="email" type="text" required />
+          <span></span>
+          <label id="email">Email Address</label>
+        </div>
+        <div class="txt_field">
+          <input id="pass" type="password" required />
+          <span></span>
+          <label id="pass"> Create Password</label>
+        </div>
+        <input id="submit" type="submit" value="REGISTER" />
+      </form>
     </div>
-</body>
+  </body>
 </html>
 
 <script>
-     var id = localStorage.getItem("emailId");
-    var userDeatail = JSON.parse(localStorage.getItem("userDetails")) || [];
+  var id = localStorage.getItem("emailId");
+  var userDeatail = JSON.parse(localStorage.getItem("userDetails")) || [];
 
-    document.querySelector("#submit").addEventListener("click", function(){
+  document.querySelector("#submit").addEventListener("click", function () {
+    var userName = document.getElementById("user").value;
+    var phoneNum = document.getElementById("phone").value;
+    var userEmail = document.getElementById("email").value;
+    var userEmail = id;
+    document.getElementById("email").innerText = userEmail;
+    var userPass = document.getElementById("pass").value;
 
-        var userName = document.getElementById("user").value;
-        var phoneNum = document.getElementById("phone").value;
-         var userEmail = document.getElementById("email").value;
-         var userEmail = id;
-         document.getElementById("email").innerText=userEmail;
-        var userPass = document.getElementById("pass").value;
+    if (
+      userName !== "" &&
+      phoneNum !== "" &&
+      userEmail !== "" &&
+      userPass !== ""
+    ) {
+      var newUser = {
+        userName: userName,
+        phoneNum: phoneNum,
+        userEmail: userEmail,
+        userPass: userPass,
+      };
 
-        if(userName !=="" && phoneNum !=="" && userEmail!=="" && userPass!==""){
-
-            var newUser = {
-                userName:userName,
-                phoneNum:phoneNum,
-                userEmail: userEmail, 
-                userPass:userPass,
-            };
-
-            userDeatail.push(newUser);
-            localStorage.setItem("userDetails", JSON.stringify(userDeatail));
-            // window.location.href = ""  ------->HOME PAGE
-            window.location.href="./homePage.html";
-        }
-    });
+      userDeatail.push(newUser);
+      localStorage.setItem("userDetails", JSON.stringify(userDeatail));
+      // window.location.href = ""  ------->HOME PAGE
+      window.location.href = "/index.html";
+    }
+  });
 </script>
