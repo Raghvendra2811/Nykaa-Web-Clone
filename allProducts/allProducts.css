@@ -53,13 +53,6 @@
   background-color: rgb(250, 90, 152);
 }
 
-.stickyClass {
-  /* border: 2px solid red; */
-  height: fit-content;
-  position: sticky;
-  top: 0;
-}
-
 #productcarousel {
   margin-top: 15px;
   /* border: 20px solid  green; */
@@ -109,7 +102,7 @@
   margin-top: 20px;
 }
 #filter-product {
-  position: relative;
+  /* position: relative; */
   width: 80%;
   margin: auto;
   margin-top: 20px;

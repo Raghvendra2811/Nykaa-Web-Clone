@@ -11,6 +11,12 @@ if (localStorage.getItem("userName") == null) {
 } else {
   document.getElementById("userName").innerText =
     localStorage.getItem("userName");
+  let span = document.createElement("span");
+  span.setAttribute("id", "logout");
+  span.innerHTML =
+    '<i class="fa-solid fa-right-from-bracket"></i><span>Log Out</span>';
+  console.log(span);
+  document.getElementById("logoutdiv").append(span);
 }
 function openAccountSecction() {
   location.href = "../signUpLogin/signUp.html";
@@ -68,10 +74,22 @@ function menubarOpen() {
   a3.append(childDiv3);
   a3.setAttribute("class", "menubarDivs");
 
-  // a1.addEventListener("click", allProductClick);
-  // a3.addEventListener("click", allProductClick);
+  var a2 = document.createElement("a");
+  var childDiv2 = document.createElement("div");
+  var icon2 = document.createElement("div");
+  var h42 = document.createElement("h4");
+  let span = document.createElement("span");
+  icon2.innerHTML = '<i class="fa-solid fa-right-from-bracket"></i>';
 
-  maindiv.append(div, a4, a1, a3);
+  h42.innerText = "Log Out";
+  childDiv2.append(icon2, h42);
+  a2.append(childDiv2);
+
+  // a2.setAttribute("id", "logout");
+  // a1.addEventListener("click", allProductClick);
+  a2.addEventListener("click", logoutUser);
+  a2.setAttribute("class", "menubarDivs");
+  maindiv.append(div, a4, a1, a2, a3);
 
   document.querySelector("html").append(maindiv);
 }
@@ -248,4 +266,20 @@ function getTotal(cartProducts) {
     return cartTotal;
   }
   return cartTotal + 70;
+}
+
+document.querySelector("#logout").addEventListener("click", () => {
+  localStorage.removeItem("userName");
+  // document.getElementById("logoutdiv").innerHTML = null;
+  window.location.href = "../index.html";
+  localStorage.removeItem("cartProducts");
+  localStorage.removeItem("couponApplied");
+});
+
+function logoutUser() {
+  localStorage.removeItem("userName");
+  // document.getElementById("logoutdiv").innerHTML = null;
+  window.location.href = "../index.html";
+  localStorage.removeItem("cartProducts");
+  localStorage.removeItem("couponApplied");
 }

@@ -194,10 +194,12 @@ header > div {
 
 #profileAndCart {
   margin-left: 10px;
-  width: 70%;
-  display: grid;
+  width: 60%;
+  display: flex;
   column-gap: 5px;
-  grid-template-columns: 40% 60%;
+
+  justify-content: space-evenly;
+  grid-template-columns: 30% 30% 40%;
 }
 
 #CartTab {
@@ -472,6 +474,9 @@ header > div {
     display: flex;
     justify-content: center;
   }
+  #logout {
+    display: none;
+  }
 
   #subNavbar {
     display: flex;
@@ -740,6 +745,10 @@ header > div {
   letter-spacing: 0px;
   align-self: center;
 }
+#logout {
+  color: black;
+  /* background-color: yellow; */
+}
 
 #cartMain {
   width: 100%;
@@ -785,4 +794,3 @@ header > h3 {
   font-size: 18px;
   font-weight: bolder;
 }
-
