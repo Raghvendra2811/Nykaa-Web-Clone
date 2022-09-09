@@ -1,181 +1,203 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+
+  box-sizing: border-box;
 }
 
-.container{
-    max-width: 1170px;
-    margin: auto;
+.row {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  width: 100%;
+  /* text-align: center; */
+}
+.row > div {
+  width: 100%;
+  /* border: 1px yellow solid; */
 }
 
-.row{
-    display: flex;
-    flex-wrap: wrap;
+ul {
+  list-style: none;
 }
 
-ul{
-    list-style: none;
+.footer {
+  background-color: #8c8d94;
+  padding: 70px 30px;
+  width: 100%;
+  font-family: Inter, Roboto, Arial, sans-serif;
 }
 
-
-.footer{
-    background-color:#8C8D94;
-    padding: 70px 0;
+.col {
+  width: 20%;
+  padding: 0 15px;
 }
 
-.col{
-    width: 20%;
-    padding: 0 15px;
+.col h4 {
+  font-size: 18px;
+  color: #ffffff;
+  text-transform: capitalize;
+  margin-bottom: 35px;
+  position: relative;
 }
 
-.col h4{
-    font-size: 18px;
-    color: #ffffff;
-    text-transform: capitalize;
-    margin-bottom: 35px;
-    position: relative;
+.col h4 ::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  background-color: teal;
+  height: 2px;
+  box-sizing: border-box;
+  width: 50px;
 }
 
-.col h4 ::before{
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: -10px;
-    background-color: teal;
-    height: 2px;
-    box-sizing: border-box;
-    width: 50px;
+.col ul li:not(:last-child) {
+  margin-bottom: 10px;
 }
 
-.col ul li:not(:last-child){
-    margin-bottom: 10px;
+.col ul li {
+  color: #ffffff;
 }
 
-.col ul li{
-    color: #ffffff;
+.col ul li:hover {
+  color: #dd1b73;
+  cursor: pointer;
 }
 
-.col ul li:hover{
-    color: #DD1B73;
-    cursor: pointer;
+.footer1 {
+  background-color: #3f414d;
+  padding: 30px 0;
+  font-family: Inter, Roboto, Arial, sans-serif;
+}
+.contactRow {
+  /* display: grid;
+   */
+  width: 100%;
+  /* grid-template-columns: (3, 1fr); */
 }
 
-@media(max-width: 767px){
-    .col {
-        width: 50%;
-        margin-bottom: 30px;
-    }
-}
-@media(max-width: 574px){
-    .col {
-        width: 100%;
-    }
-}
-
-.footer1{
-    background-color: #3F414D;
-    padding: 30px 0;
-}
-.contactRow{
-    display: grid;
-    /* grid-template-columns: (3, 1fr); */
+.contactRow img {
+  width: 100%;
 }
 
 .contactRow :nth-child(1) img {
-    width: 8%;
+  width: 8%;
 }
-.contactRow :nth-child(2) div img{
-    width: 20%;
-    padding-top: 10px;
-    /* margin-left: 6%; */
+.contactRow :nth-child(2) div img {
+  width: 20%;
+  padding-top: 10px;
+  /* margin-left: 6%; */
 }
-.contactRow :nth-child(2){
-    margin-left: 6%;
+.contactRow :nth-child(2) {
+  margin-left: 6%;
 }
-.contactRow :nth-child(3){
-    margin-right: 6%;
+.contactRow :nth-child(3) {
+  margin-right: 6%;
 }
-.contactRow :nth-child(3) div{
-    padding-top: 8px;
+.contactRow :nth-child(3) div {
+  padding-top: 8px;
 }
 
 .contactRow {
-    display: flex;
-    justify-content: space-around;
+  display: flex;
+  justify-content: space-around;
 }
 .contactRow div {
-    color: #ffffff;
+  color: #ffffff;
 }
-
 
 .container2 {
-    max-width: 1200px;
-    margin: auto;
+  max-width: 1200px;
+  margin: auto;
 }
 .row2 {
-    width: 94%;
-    margin: auto;
-    /* padding: 0 25px; */
-    /* padding-top: 20px;
+  width: 94%;
+  margin: auto;
+  /* padding: 0 25px; */
+  /* padding-top: 20px;
     padding-bottom:30px; */
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
 }
 .footer2 {
-    background-color: #F3F3F3;
-    padding-top: 54px;
-    padding-bottom: 100px;
+  background-color: #f3f3f3;
+  padding-top: 54px;
+  font-family: Inter, Roboto, Arial, sans-serif;
+  padding-bottom: 100px;
 }
 
-.row2 .col2 {
-    display: flex;
-    justify-content: space-between;
-    margin-right: 20px;
-    padding: 10px;
-    /* width: 20%;*/
-    /* padding: 0 25px;  */
+.col2 {
+  display: flex;
+  justify-content: space-between;
+  margin-right: 20px;
+  padding: 10px;
+  /* width: 20%;*/
+  /* padding: 0 25px;  */
 }
- 
-@media only screen and (min-width:421px) and (max-width: 768px){
-    .row2 {
-        grid-template-columns: repeat(2, 1fr);
-    }
+
+@media only screen and (min-width: 421px) and (max-width: 768px) {
 }
-@media only screen and (min-width:0px) and (max-width: 420px){
-    .row2 {
-        grid-template-columns: repeat(1, 1fr);
-    }
+@media only screen and (min-width: 0px) and (max-width: 420px) {
 }
 
 .footer3 div {
-    display: flex;
-    justify-content: space-between;
-    background-color: #FC2779;
-    color: #ffffff;
-    padding: 30px;
-    font-size: 14px;
+  display: flex;
+  justify-content: space-between;
+  background-color: #fc2779;
+  color: #ffffff;
+  font-size: 14px;
+  font-family: Inter, Roboto, Arial, sans-serif;
 }
-.footer3 div p{
-    cursor: pointer;
+.footer3 div p {
+  cursor: pointer;
 }
-.footer3 div + div{
-    background-color: #ffffff;
-    padding: 20px;
+
+.footer3 > div {
+  display: grid;
+  justify-content: space-between;
+  background-color: #fc2779;
+  color: #ffffff;
+  text-align: center;
+  font-size: 14px;
+  grid-template-columns: repeat(4, 1fr);
+  width: 100%;
+  font-family: Inter, Roboto, Arial, sans-serif;
+  padding: 10px;
 }
-.footer3 div :nth-child(1){
-    margin-left: 490px;
-    margin-right: -230px;
+.footer3 p {
+  width: 100%;
 }
-.footer3 div :nth-child(2){
-    margin-left: -140px;
-    margin-right: -180px;
+@media (max-width: 950px) {
+  .row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 30px;
+  }
+
+  .row2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  #firstfootercontainer {
+    display: none;
+  }
+  /* .footer2 {
+      display: none;
+    } */
+  .footer3 > div {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
-.footer3 div :nth-child(3){
-    margin-left: -190px;
-    margin-right: -200px;
-}
-.footer3 div :nth-child(4){
-    margin-left: -170px;
-    margin-right: 500px;
+@media (max-width: 574px) {
+  .row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 30px;
+  }
+
+  #firstfootercontainer {
+    display: none;
+  }
+  .footer3 > div {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }

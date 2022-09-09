@@ -53,7 +53,7 @@
   background-color: rgb(250, 90, 152);
 }
 
-.stickyClass{
+.stickyClass {
   /* border: 2px solid red; */
   height: fit-content;
   position: sticky;
@@ -68,7 +68,7 @@
   margin-bottom: 20px;
   position: fixed;
   top: 0;
-  /* width: 100%; */
+  /* width: 100%; 
 } */
 /* #filter-box {
   position: fixed;
@@ -78,12 +78,12 @@
   position: relative;
   top: 0;
   /* float: left; */
-  /* width: 100%; */
-}
+/* width: 100%; */
+/* } */
 #filter-box {
   position: relative;
-} */
-#filter-box button {
+}
+*/ #filter-box button {
   border-radius: 3px;
   border-bottom: 1px solid rgba(101, 119, 134, 0.22);
 }
@@ -96,11 +96,12 @@
 * {
   margin: 0px;
   padding: 0px;
-  background-color: rgb(243, 243, 243);
+
   font-family: Inter, Roboto, Arial, sans-serif;
 }
 #allProductMain {
   width: 100%;
+  background-color: rgb(243, 243, 243);
 }
 #productcarousel {
   width: 82%;
@@ -257,7 +258,8 @@
 }
 #sticky-box {
   display: none;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(1, 75%);
+  justify-content: center;
 }
 
 @media screen and (max-width: 1000px) {
@@ -289,20 +291,26 @@
   } */
 }
 body {
-  display: grid;
-  justify-content: center;
+  display: block;
+  /* justify-content: center; */
 }
 .pagination {
   /* border: 2px solid red; */
   display: inline-block;
   /* margin: 20px 50px 20px 200px;
    */
+  /* border: 1px solid yellow; */
+  display: flex;
+
+  justify-content: center;
   margin: auto;
-  margin-top: 10px;
-  /* align-items: center; */
+  margin-top: 30px;
+  padding: auto;
+  align-content: center;
 }
 .pagination span {
   margin: 3px;
+  border: 1px black solid;
 }
 #addBagButton {
   font-size: 16px;
@@ -344,4 +352,8 @@ body {
   #1sticky-box > button:active #sort-box {
     display: block;
   } */
+}
+
+#searchBar > imput {
+  padding: 300px auto;
 }
