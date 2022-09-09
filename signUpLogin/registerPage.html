@@ -42,7 +42,8 @@
   var id = localStorage.getItem("emailId");
   var userDeatail = JSON.parse(localStorage.getItem("userDetails")) || [];
 
-  document.querySelector("#submit").addEventListener("click", function () {
+  document.querySelector("form").addEventListener("submit", function () {
+    event.preventDefault();
     var userName = document.getElementById("user").value;
     var phoneNum = document.getElementById("phone").value;
     var userEmail = document.getElementById("email").value;
@@ -65,8 +66,13 @@
 
       userDeatail.push(newUser);
       localStorage.setItem("userDetails", JSON.stringify(userDeatail));
+      console.log("hello")
       // window.location.href = ""  ------->HOME PAGE
-      location.href = "../index.html";
+      location.href = "./loginOrReg.html";
     }
   });
+  // document.querySelector("form").addEventListener("submit",gotoHOme)
+  // function gotoHOme(){
+  //   window.location.href = "../index.html";
+  // }
 </script>

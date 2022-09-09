@@ -1,8 +1,8 @@
 // var dataArr=[{
-//     productImage:"https://honasa-mamaearth-production.imgix.net/u/b/ubtan_scurb_wash_u8j8uwoqnpyohxlf.jpg",
-//     productName:"MamaEarth Utban Face Wash",
-//     quantity: 2,
-//     property:50+"ml",
+//     image:"https://honasa-mamaearth-production.imgix.net/u/b/ubtan_scurb_wash_u8j8uwoqnpyohxlf.jpg",
+//     name:"MamaEarth Utban Face Wash",
+//     qty: 2,
+//     category:50+"ml",
 //     sellPrice:"₹"+1800,
 //     actualPrice:"₹"+600,
 // },
@@ -15,42 +15,50 @@
 //     actualPrice:"₹"+600,
 // }
 // ]
-var calcObj={
-    totalQuantity:0,
-    subTotal:0,
-    shipping:"Free",
-    discount:0,
-    grandTotal:0,
-    }
+// var calcObj={
+//     totalQuantity:0,
+//     subTotal:0,
+//     shipping:"Free",
+//     discount:0,
+//     grandTotal:0,
+//     }
 var dataArr=JSON.parse(localStorage.getItem("cartProducts"))||[];
-console.log(dataArr);
+// console.log(dataArr);
 
-calcObj.totalQuantity=dataArr.reduce(function(acc,elem){
-    return acc+elem.qty;
-});
-calcObj.subTotal=dataArr.reduce(function(acc,elem){
-    return acc+elem.price;
-});
-var coupen=localStorage.getItem("coupenApplied")||0;
+calcObjtotalQuantity=dataArr.reduce(function(acc,elem){
+    console.log("Hello")
+    return Number(acc)+Number(elem.qty);
+    
+},0);
+
+
+calcObjsubTotal=dataArr.reduce(function(acc,elem){
+    console.log(acc+" "+elem.price)
+    return Number(acc)+Number(elem.price);
+    
+},0);
+var coupen=localStorage.getItem("couponApplied")||0;
 var dis=0;
 if(coupen===1){
-dis=((calcObj.subTotal)*10)/100;
+dis=((calcObjsubTotal)*10)/100;
 }
-calcObj.discount=dis;
-calcObj.grandTotal=subTotal-dis;
-
+calcObjdiscount=dis;
+ calcObjgrandTotal=calcObjsubTotal-dis;
+// console.log(calcObjgrandTotal)
+// console.log(calcObjdiscount)
+// console.log(calcObjsubTotal)
 
 
 
 //"₹"
 var pTopLeft=document.createElement("p");
-pTopLeft.innerText=calcObj.totalQuantity+" Items in your Bag";
+pTopLeft.innerText=calcObjtotalQuantity+" Items in your Bag";
 pTopLeft.setAttribute("id","pTopLeft");
  var pTopRight =document.createElement("p");
  pTopRight.innerText="EDIT";
  pTopRight.setAttribute("id","pTopRight")
  document.getElementById("top").append(pTopLeft,pTopRight);
- console.log(pTopLeft,pTopRight,calcObj.totalQuantity)
+ console.log(pTopLeft,pTopRight,calcObjtotalQuantity)
  
     dataArr.map(function(elem){
         var mainDiv=document.createElement("div");
@@ -65,11 +73,11 @@ pTopLeft.setAttribute("id","pTopLeft");
         desDiv.setAttribute("id","desDiv");
         var div1=document.createElement("div");
         var p1=document.createElement("p");
-        p1.innerText=elem.productName;
+        p1.innerText=elem.name;
         div1.setAttribute("id","div1");
         var div2=document.createElement("div");
         div2.setAttribute("id","div2");
-        div2.innerText=elem.category;
+        div2.innerText="";
         var div3=document.createElement("div");
         div3.setAttribute("id","div3");
        var p31=document.createElement("p");
@@ -77,7 +85,7 @@ pTopLeft.setAttribute("id","pTopLeft");
        p31.setAttribute("id","p31");
        
         var p32=document.createElement("p");
-       p32.innerText=elem.actualPrice;
+       p32.innerText=elem.price;
        p32.setAttribute("id","p32");
        div3.append(p31,p32);
        div1.append(p1);
@@ -94,28 +102,28 @@ pTopLeft.setAttribute("id","pTopLeft");
  pb11.innerText="Sub Total";
  pb11.setAttribute("id","pb11");
  var pb12=document.createElement("p");
- pb12.innerText=calcObj.subTotal;
+ pb12.innerText=calcObjsubTotal;
  pb12.setAttribute("id","pb12");
  document.getElementById("divb1").append(pb11,pb12);
  var pb21=document.createElement("p");//2
  pb21.innerText="Shipping Charge";
  pb21.setAttribute("id","pb21");
  var pb22=document.createElement("p");
- pb22.innerText=calcObj.shipping;
+ pb22.innerText="Free";
  pb22.setAttribute("id","pb22");
  document.getElementById("divb2").append(pb21,pb22);
  var pb31=document.createElement("p");//3
  pb31.innerText="Discount";
  pb31.setAttribute("id","pb31");
  var pb32=document.createElement("p");
- pb32.innerText="-"+calcObj.discount;
+ pb32.innerText="-"+calcObjdiscount;
  pb32.setAttribute("id","pb32");
  document.getElementById("divb3").append(pb31,pb32);
  var pb41=document.createElement("p");//4
- pb41.innerText="₹"+"Grand Total";
+ pb41.innerText="Grand Total";
  pb41.setAttribute("id","pb41");
  var pb42=document.createElement("p");
- pb42.innerText=calcObj.grandTotal;
+ pb42.innerText=calcObjgrandTotal;
  pb42.setAttribute("id","pb42");
  document.getElementById("divb4").append(pb41,pb42);
 

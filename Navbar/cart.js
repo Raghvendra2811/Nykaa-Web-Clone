@@ -65,17 +65,14 @@ function displayProducts(products) {
     document.getElementById("billItems").innerText = cartProducts.length;
     document.getElementById("bagMrp").innerText = bagMrp(cartProducts);
     document.getElementById("bagDiscount").innerText =
-      bagDiscount(cartProducts);
+      bagDiscount(cartProducts).toFixed(1);
     if (bagDiscount(cartProducts) >= 499) {
       document.getElementById("shippingCost").innerText = 0;
     } else {
       document.getElementById("shippingCost").innerText = 70;
     }
     if (localStorage.getItem("couponApplied") == 1) {
-      document.getElementById("couponAmount").innerText = (
-        (bagDiscount(cartProducts) * 10) /
-        100
-      ).toFixed(1);
+      document.getElementById("couponAmount").innerText = ((bagDiscount(cartProducts)).toFixed(1));
     } else {
       document.getElementById("couponAmount").innerText = 0;
     }
@@ -118,7 +115,6 @@ function bagOrignalPrice(arr) {
 function getTotal() {
   return (
     Number(document.getElementById("bagMrp").innerText) -
-    Number(document.getElementById("bagDiscount").innerText) -
     Number(document.getElementById("couponAmount").innerText) +
     Number(document.getElementById("shippingCost").innerText)
   );
