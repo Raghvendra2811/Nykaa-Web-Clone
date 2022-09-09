@@ -1,57 +1,76 @@
-body {
-  height: 600px;
-  margin-top: 65px;
-  background-color: #f3f3f3;
+*{
+  box-sizing: border-box;
 }
-#parent {
+body{
+  background-color: #F3F3F3;
+}
+
+#parent{
+  /* border: 1px yellow solid; */
   width: 23%;
-  height: 100%;
+  display: block;
   margin: auto;
-  border-radius: 20px;
-  background-color: white;
-  border: 1px solid silver;
-}
-div p {
+  margin-top: 5%;
+  height: 80%;
   text-align: center;
-  margin-top: -5px;
-  margin-left: 12px;
-  padding-bottom: 20px;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-weight: 500px;
-  border-bottom: 1px solid silver;
+  background-color: #FFFFFF;
+  border-radius: 8px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  
 }
-/* input{
-    margin: 25%
-} */
-#parent :nth-child(1) p {
-  padding-top: 40px;
-}
-#parent div {
-  height: 10%;
-  width: 296px;
-  padding-left: 10px;
-  padding-right: 0px;
-}
-input {
-  width: 280px;
-  padding: 12px;
-  margin-top: 28px;
-  text-align: center;
-  background-color: #f3f3f3;
-  border: 1px solid crimson;
-  margin-left: 4px;
+
+
+div > div:nth-child(1){
+  display: block;
+  width: 95%;
+  margin: auto;
+  padding: 18px 0px;
+  border-bottom: 1px solid #ebebeb;
+  font-size: 16px;
+  font-weight: 600;
   /* margin-right: 10px; */
-}
-div button {
-  width: 296px;
-  margin-top: 250px;
+  /* margin-bottom: 7px; */
+  /* margin-left: 10px; */
+  /* padding: 25px 10px 15px; */
+  /* position: relative; */
   text-align: center;
-  padding: 10px;
-  font-size: 18px;
-  background-color: #fc2779;
-  border: #fc2779;
+  text-transform: uppercase;
+  font-family: sans-serif;
+  color: #3f414d;
+  
+}
+div > div:nth-child(2){
+  display: block;
+  margin: auto;
+  width: 80%;
+  padding: 10px 0px;
+  margin-bottom: 200px;
+}
+
+div > div:nth-child(2) > input{
+  display: block;
+  margin: auto;
+  width: 100%;
+  text-align: center;
+  background-color: #F3F3F3;
+  padding: 13px 3px;
+  outline: none;
+  border: none;
+  border: 1px #FF0000 solid;
+  border-radius: 3px;
+ 
+}
+
+
+button{
+  margin-bottom: 50px;
+  width: 90%;
+  padding: 15px 3px;
+  border-radius: 3px;
+  border: none;
+  background-color: #FC2779;
   color: white;
-  margin-left: 8px;
-  /* display: grid;
-  align-content: center; */
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 100px;
 }
