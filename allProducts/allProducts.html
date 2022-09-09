@@ -3,7 +3,7 @@
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="allproducts.css" />
-   
+
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
@@ -77,36 +77,53 @@
         </div>
       </div>
       <div id="filter-product">
-        <div id="filter-box">
-          <button type="button" class="collapsible">
-            <span class="bagwhite">Sort By: </span
-            ><span class="bagwhite">&darr;</span>
-          </button>
-          <button type="button" class="collapsible1">
-            <span class="bagwhite">Preference </span
-            ><span class="bagwhite">&darr;</span>
-          </button>
-          <button type="button" class="collapsible1">
-            <span class="bagwhite">Preference </span
-            ><span class="bagwhite">&darr;</span>
-          </button>
-          <button type="button" class="collapsible1">
-            <span class="bagwhite">Preference </span
-            ><span class="bagwhite">&darr;</span>
-          </button>
-          <button type="button" class="collapsible1">
-            <span class="bagwhite">Preference </span
-            ><span class="bagwhite">&darr;</span>
-          </button>
-          <button type="button" class="collapsible1">
-            <span class="bagwhite">Preference </span
-            ><span class="bagwhite">&darr;</span>
-          </button>
-          <div class="content">
-            <div class="dropdown" id="HtoL">High to low</div>
-            <div class="dropdown" id="LtoH">Low to High</div>
-            <div class="dropdown">Popularity</div>
-            <div class="dropdown">Discount</div>
+        <div class="stickyClass" id="filter-box">
+          <div id="sort-top">
+            <button type="button" class="collapsible">
+              <span class="bagwhite">Sort By: </span
+              ><span class="bagwhite"
+                ><i class="fa-solid fa-arrow-down bgwhite"></i
+              ></span>
+            </button>
+            <div class="content">
+              <div class="dropdown" id="HtoL">High to low</div>
+              <div class="dropdown" id="LtoH">Low to High</div>
+              <div class="dropdown">Popularity</div>
+              <div class="dropdown">Discount</div>
+            </div>
+          </div>
+
+          <div id="filter-Top">
+            <button type="button" class="collapsible1">
+              <span class="bagwhite">Category </span
+              ><span class="bagwhite"
+                ><i class="fa-solid fa-arrow-down bgwhite"></i
+              ></span>
+            </button>
+            <button type="button" class="collapsible1">
+              <span class="bagwhite">Brand </span
+              ><span class="bagwhite"
+                ><i class="fa-solid fa-arrow-down bgwhite"></i
+              ></span>
+            </button>
+            <button type="button" class="collapsible1">
+              <span class="bagwhite">Discount </span
+              ><span class="bagwhite"
+                ><i class="fa-solid fa-arrow-down bgwhite"></i
+              ></span>
+            </button>
+            <button type="button" class="collapsible1">
+              <span class="bagwhite">Gender </span
+              ><span class="bagwhite"
+                ><i class="fa-solid fa-arrow-down bgwhite"></i
+              ></span>
+            </button>
+            <button type="button" class="collapsible1">
+              <span class="bagwhite">Preference </span
+              ><span class="bagwhite"
+                ><i class="fa-solid fa-arrow-down bgwhite"></i
+              ></span>
+            </button>
           </div>
         </div>
         <div class="products"></div>
@@ -115,7 +132,9 @@
         <div id="1sticky-box">
           <button type="button" class="collapsible">
             <span class="bagwhite">Sort By: </span
-            ><span class="bagwhite">&darr;</span>
+            ><span class="bagwhite"
+              ><i class="fa-solid fa-arrow-down bgwhite"></i
+            ></span>
           </button>
           <div class="content">
             <div class="dropdown" id="HtoL1">High to low</div>
@@ -124,14 +143,15 @@
             <div class="dropdown">Discount</div>
           </div>
         </div>
-        <div id="2sticky-box">
-          <div class="content"></div>
-        </div>
       </div>
     </div>
     <div class="pagination"></div>
     <script type="module" src="allProducts.js"></script>
     <script type="module" src="data.js"></script>
+    <script
+      src="https://kit.fontawesome.com/7f18e98467.js"
+      crossorigin="anonymous"
+    ></script>
     <script>
       let slideIndex = 1;
       showSlides(slideIndex);

@@ -52,14 +52,45 @@
 .dot:hover {
   background-color: rgb(250, 90, 152);
 }
+
+.stickyClass{
+  /* border: 2px solid red; */
+  height: fit-content;
+  position: sticky;
+  top: 0;
+}
+
 #productcarousel {
   margin-top: 15px;
   /* border: 20px solid  green; */
 }
-.ratingDiv{
+/* #sort-top {
+  margin-bottom: 20px;
+  position: fixed;
+  top: 0;
+  /* width: 100%; */
+} */
+/* #filter-box {
+  position: fixed;
+  top: 0;
+} */
+/* #filter-top {
+  position: relative;
+  top: 0;
+  /* float: left; */
+  /* width: 100%; */
+}
+#filter-box {
+  position: relative;
+} */
+#filter-box button {
+  border-radius: 3px;
+  border-bottom: 1px solid rgba(101, 119, 134, 0.22);
+}
+.ratingDiv {
   margin: 20px;
 }
-.bgwhite{
+.bgwhite {
   background-color: #ffffff;
 }
 * {
@@ -77,6 +108,7 @@
   margin-top: 20px;
 }
 #filter-product {
+  position: relative;
   width: 80%;
   margin: auto;
   margin-top: 20px;
