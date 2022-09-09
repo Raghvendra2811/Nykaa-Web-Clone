@@ -39,7 +39,8 @@
 
   document.getElementById("name").innerText = currUser[0].userName;
 
-  document.getElementById("submit").addEventListener("click", function () {
+  document.querySelector("form").addEventListener("submit", function () {
+    event.preventDefault();
     var pass = document.getElementById("pass").value;
 
     var currPass;

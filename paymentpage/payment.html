@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="//www.nykaa.com/media/favicon/default/nykaa_favicon_a.png">
     <title>Payment Page</title>
     <link  rel="stylesheet" href="payment.css" />
 </head>
@@ -79,16 +80,16 @@
                 <form action="">
                         <div class="inputBox">
                             <span>Card Number</span>
-                            <input type="text" maxlength="16" class="cardNumber"/>
+                            <input type="text" maxlength="16" class="cardNumber" required/>
                     </div>
                         <div class="inputBox">
                             <span>Card Holder</span>
-                            <input type="text"  class="cardHolder"/>
+                            <input type="text"  class="cardHolder" required/>
                     </div>
                     <div class="flexbox">
                         <div class="inputBox">
                             <span>Expire Month</span>
-                            <select name="" id="" class="month-input">
+                            <select name="" id="" class="month-input" required>
                                 <option value="month" selected disabled>Month</option>
                                 <option value="01">01</option>
                                 <option value="02">02</option>
@@ -106,7 +107,7 @@
                         </div>
                         <div class="inputBox">
                             <span>Expire Year</span>
-                            <select name="" id="" class="yearinput">
+                            <select name="" id="" class="yearinput" required>
                                 <option value="month" selected disabled>Year</option>
                                 <option value="2022">2022</option>
                                 <option value="2023">2023</option>
@@ -122,10 +123,10 @@
                         </div>
                         <div class="inputBox">
                             <span>CVV</span>
-                            <input type="text" maxlength="4" class="cvvinput">
+                            <input type="password" maxlength="4" class="cvvinput" required>
                     </div>
                     </div>
-                    <input type="submit" value="SUBMIT" class="submitbtn">
+                    <input type="submit" value="SUBMIT" id="submitbtn" class="submitbtn" required>
                     </form>
         </div>
     </div>
