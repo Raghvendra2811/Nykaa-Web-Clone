@@ -72,17 +72,6 @@ ul{
         width: 100%;
     }
 }
-/* @media screen and (min-width: 768px) and (max-width:1160px) {
-    .contactRow {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-@media screen and (max-width:767px) {
-    .contactRow {
-        grid-template-columns: repeat(1, 1fr);
-    }
-} */
-
 
 .footer1{
     background-color: #3F414D;
@@ -119,24 +108,19 @@ ul{
     color: #ffffff;
 }
 
-@media screen and (min-width: 768px) and (max-width:1160px) {
-    .contactRow {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-@media screen and (max-width:767px) {
-    .contactRow {
-        grid-template-columns: repeat(1, 1fr);
-    }
-}
 
 .container2 {
-    max-width: 1170px;
+    max-width: 1200px;
     margin: auto;
 }
 .row2 {
-    display: flex;
-    flex-wrap: wrap;
+    width: 94%;
+    margin: auto;
+    /* padding: 0 25px; */
+    /* padding-top: 20px;
+    padding-bottom:30px; */
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
 }
 .footer2 {
     background-color: #F3F3F3;
@@ -144,13 +128,24 @@ ul{
     padding-bottom: 100px;
 }
 
-.col2 {
-    width: 20%;
-    padding: 0 25px;
+.row2 .col2 {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 20px;
+    padding: 10px;
+    /* width: 20%;*/
+    /* padding: 0 25px;  */
 }
-
-.col2 :not(:last-child){
-    margin-bottom: 10px;
+ 
+@media only screen and (min-width:421px) and (max-width: 768px){
+    .row2 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media only screen and (min-width:0px) and (max-width: 420px){
+    .row2 {
+        grid-template-columns: repeat(1, 1fr);
+    }
 }
 
 .footer3 div {
@@ -161,27 +156,26 @@ ul{
     padding: 30px;
     font-size: 14px;
 }
-/* .footer3 div p{
-    margin: 0;
-    padding: 0;
-} */
+.footer3 div p{
+    cursor: pointer;
+}
 .footer3 div + div{
     background-color: #ffffff;
     padding: 20px;
 }
 .footer3 div :nth-child(1){
-    margin-left: 440px;
-    margin-right: -220px;
+    margin-left: 490px;
+    margin-right: -230px;
 }
 .footer3 div :nth-child(2){
-    margin-left: -120px;
+    margin-left: -140px;
     margin-right: -180px;
 }
 .footer3 div :nth-child(3){
-    margin-left: -180px;
-    margin-right: -180px;
+    margin-left: -190px;
+    margin-right: -200px;
 }
 .footer3 div :nth-child(4){
-    margin-left: -80px;
-    margin-right: 440px;
+    margin-left: -170px;
+    margin-right: 500px;
 }
