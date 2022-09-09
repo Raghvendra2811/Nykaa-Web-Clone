@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="loginOrReg.css">
+</head>
+<body>
+    <div id="parent">
+        <div>
+            <div>
+                <p>LOGIN / REGISTER</p>
+            </div>
+        </div>
+        <div>
+            <div>
+                <input placeholder="Enter Email Id Or Phone Number" required/>
+            </div>
+            <!-- <div><p>REQUIRED</p></div> -->
+            <div></div>
+            <div><button>PROCEED</button></div>
+        </div>
+        <div></div>
+    </div>
+</body>
+</html>
+
+<script>
+    var existingUsers = JSON.parse(localStorage.getItem("userDetails")) || [];
+    var existingIds = [];
+    for(var i=0; i<existingUsers.length; i++){
+        existingIds.push(existingUsers[i].userEmail);
+    }
+    console.log(existingIds);
+     
+    document.querySelector("button").addEventListener("click", function(){
+        var inputEmail = document.querySelector("input").value;
+
+        if(inputEmail !== ""){
+
+            var id;
+            for(var i=0; i<existingIds.length; i++){
+                if(existingIds[i]===inputEmail){
+                    localStorage.setItem("registeredId", existingIds[i]);
+                    id=true;
+                    break;
+                }
+            }
+
+            if(id){
+                window.location.href = "./loginPage.html";
+            }
+            else{
+                localStorage.setItem("emailId", inputEmail);
+                window.location.href = "./registerPage.html";
+            }
+            
+        }
+
+    });
+</script>

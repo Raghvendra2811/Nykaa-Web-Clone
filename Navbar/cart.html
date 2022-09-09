@@ -21,13 +21,24 @@
         </a>
       </div>
       <div id="products"></div>
-      <div id="coupons">
-      <img src="https://cdn-icons-png.flaticon.com/512/287/287585.png" alt="" />
-      <div>
-        <h4>Coupons</h4>
-        <p style="color: #9a9a9a">Apply now and save extra!</p>
+      <div id="couponAll">
+
+        <div id="coupons">
+          <img src="https://cdn-icons-png.flaticon.com/512/287/287585.png" alt="" />
+          <div>
+            <h4>Coupons</h4>
+            <p style="color: #9a9a9a">Apply now and save extra!</p>
+          </div>
+          <i class="fa-sharp fa-solid fa-arrow-right"></i>
+        </div>
+        <div id="couponApply">
+          <h3>Enter Coupon Code</h3>
+          <form action="">
+            <input type="text" id="couponcode" placeholder="NAYKAA10">
+            <button><span> Apply</span></button>
+          </form>
+        </div>
       </div>
-      <i class="fa-sharp fa-solid fa-arrow-right"></i>
     </div>
     <div id="billHead">
       <h3>Price Details</h3>
@@ -38,6 +49,8 @@
         <p>₹<span id="bagDiscount"></span></p>
         <p>Shipping</p>
         <p>₹<span id="shippingCost"></span></p>
+        <p>Coupon</p>
+        <p>₹<span id="couponAmount"></span></p>
         <h3>You Pay</h3>
         <h3>₹<span id="total"></span></h3>
       </div>
@@ -61,4 +74,3 @@
   src="https://kit.fontawesome.com/a103610109.js"
   crossorigin="anonymous"
 ></script>
-

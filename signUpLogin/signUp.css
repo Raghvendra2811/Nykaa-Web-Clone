@@ -1,0 +1,104 @@
+body{
+    height: 700px;
+    margin-top: 65px;
+    background-color:#F3F3F3;
+}
+#parent{
+    width: 28%;
+    width: 350px;
+    height: 100%;
+    margin: auto;
+    border-radius: 15px;
+    background-color: white;
+    border: 1px solid silver;
+    
+}
+#content{
+    width: 296px;
+    /* margin: auto; */
+    padding-left: 30px;
+    /* padding-right: 50px; */
+}
+#content :nth-child(1) p{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 34px;
+    font-weight:1000px;
+}
+#content :nth-child(2) p{
+    /* text-align: center; */
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 18px;
+    font-weight: 200px;
+    border-bottom: 1px solid silver;
+    margin-top: -20px;
+    padding-bottom: 20px;
+}
+#content :nth-child(3) p{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 17px;
+    font-weight: 200px;
+    margin-top: 20px;
+    padding-bottom: 30px;
+}
+#icon img{
+    width: 296px;
+    height: 160px;
+}
+div button{
+    width: 296px;
+    text-align: center;
+    padding: 10px;
+    font-size: 18px;
+    background-color: #FC2779;
+    border: #FC2779;
+    color: white;
+    margin-top: 20px;
+}
+p{
+    width: 296px;  
+    font-size: 18px;
+}
+#gle{
+    width: 296px; 
+    display: flex;
+    justify-content: space-around;
+}
+#gle img{
+    width: 20px;
+    height: 20px;
+    margin-right: -20px;
+    margin-top: 8px;
+}
+#gle button{
+    color: black;
+    background-color: white;
+}
+#content :nth-child(6){
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 20px;
+    /* padding: 5px; */
+    padding-top: 0px;
+    border: 1px solid silver;
+}
+span img{
+    width: 20px;
+    height: 20px;
+    margin-top: 18px;
+    padding-left: 90px;
+}
+#content :nth-child(6) p{
+    margin-bottom: 5px;
+    margin-left: 10px;
+    padding-top: -20px;
+    padding: -5px;
+    font-size: 20px;
+}
+#sp{
+    border: 1px solid= grey;
+}
+#content :last-child p{
+    font-size: 18px;
+    font-family: initial;
+    /* font-weight: -5px; */
+}

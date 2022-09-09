@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    body{
+        background-image:url('https://img.myloview.com/stickers/bokeh-abstract-pink-and-white-beautiful-light-glitter-sparkles-background-soft-color-backdrop-template-for-design-cosmetic-ads-romantic-valentine-day-women-baby-beauty-love-product-display-700-186883868.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        backface-visibility: visible;
+        font-family: sans-serif;
+    }
+    .parentDiv{
+        width: 350px;
+        height:600px ;
+        border: 2px solid red;
+        background-color: white;
+        margin: auto;
+        
+    }
+    .parentDiv>div{
+        border: 1px solid teal;
+    }
+    .parentDiv>div>img{
+        width: 90%;
+        height:250px;
+        margin: auto;
+    }
+
+    #div2{
+        text-align: center;
+        font-weight: bold;
+        font-size: 28px;
+    }
+    #div3{
+        font-weight: 400;
+        font-size: 16px;
+        text-align: center;
+    }
+    #div4{
+        width: 60%;
+        height: 25px;
+    border-radius: 5px;
+      font-size: 18px ;
+      margin: auto;
+      background-color: grey;
+    }
+    #div5{
+        margin-top: 10px;
+        height: 30px;
+        
+    }
+    #div5>p{
+        text-decoration: none;
+        text-align: center;
+       color: palevioletred;
+    }
+    #p{
+        margin-top: 0px;
+        text-align: center;
+    }
+</style>
+</head>
+<body>
+    <div class="parentDiv">
+  <div id="div1">
+    <img
+    src="https://media.istockphoto.com/vectors/vector-typography-for-banner-poster-invitation-greeting-postcard-for-vector-id1063232648?k=20&m=1063232648&s=612x612&w=0&h=uAe-h2LHZNyjwP_povu1Ll6UXphzG5fJBqyyyMMPf-U="
+    alt="image"/>
+  </div>
+  <div id="div2">
+ <h3>Order Confirmed!</h3>
+  </div>
+  <div id="div3">
+   <p>We are pleased to confirm you Order</p>
+  </div>
+  <div id="div4">
+   
+  </div>
+  <div id="div5">
+   <p><a href="#"> Continue Shoping ></a></p>
+  </div>
+    </div>
+</body>
+</html>
+<script>
+   var p=document.createElement("p");
+   p.innerText="Amount Paid : ₹"+1200;
+document.getElementById("div4").append(p);
+p.setAttribute("id","p");
+
+   
+</script>
