@@ -82,6 +82,12 @@ function displayProducts(products) {
   });
 }
 
+
+
+
+
+
+
 function showProductMain() {
   // window.location.href = "../allProducts/product.html";
   // localStorage.setItem("specificProduct", elem);
