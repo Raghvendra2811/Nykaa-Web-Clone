@@ -19,7 +19,7 @@ body{
     background-color: rgb(243,243,243);
 }
 body::-webkit-scrollbar{
-    width: 5px;
+    width: 8px;
   background-color: rgb(243,243,243);
 }
 body::-webkit-scrollbar-thumb{
