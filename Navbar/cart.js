@@ -202,3 +202,8 @@ function applyCoupon() {
   }
   display(cartProducts);
 }
+
+
+function pullIsNotWorking(){
+  
+}
