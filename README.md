@@ -18,20 +18,20 @@
 
 Fully Responsive Landing Page
 
-https://github.com/Raghvendra2811/Nykaa-Web-Clone/blob/main/src/landing.png
+![landing](https://github.com/Raghvendra2811/Nykaa-Web-Clone/blob/main/src/landing.png)
 
 ### Sign in Page:
 
 2.This is the Sign-Up & Sign-In of the clone website.
    click on the Enter Your Email to sign up.
    
-https://github.com/Raghvendra2811/Nykaa-Web-Clone/blob/main/src/Signin.png
+![Signin](https://github.com/Raghvendra2811/Nykaa-Web-Clone/blob/main/src/Signin.png)
 
 ### Product Page:
 
 5.In the product page we see various products on the basis of popularity and also user can sort the products on the basis of their prices and there is options to add products in cart and if we click on particular product, the user will navigate to the product detail page.
 
-https://github.com/Raghvendra2811/Nykaa-Web-Clone/blob/main/src/product.png
+![product](https://github.com/Raghvendra2811/Nykaa-Web-Clone/blob/main/src/product.png)
 
 
 
@@ -39,20 +39,20 @@ https://github.com/Raghvendra2811/Nykaa-Web-Clone/blob/main/src/product.png
 
 8.User can see all those products that he added to the bag and also user can apply the coupon code to get the discount. After clicking on proceed user will navigate to address page.
 
-https://github.com/Raghvendra2811/Nykaa-Web-Clone/blob/main/src/cart.png
+![cart](https://github.com/Raghvendra2811/Nykaa-Web-Clone/blob/main/src/cart.png)
 
 ### Address Page:
 
 9.Here user will get address which he added at the first time on the profile page and user can also edit their saved address. And also on the right side user can get the cart products and total price of the products.After clicking on ship to address button user redirected to payment page. Here user will get the different options for payment.
 
-https://github.com/Raghvendra2811/Nykaa-Web-Clone/blob/main/src/checkout.png
+![checkout](https://github.com/Raghvendra2811/Nykaa-Web-Clone/blob/main/src/checkout.png)
 
 
 ### Thank You Page:
 
 11.After successful payment user will get notified thank message.
 
-https://github.com/Raghvendra2811/Nykaa-Web-Clone/blob/main/src/thanku.png
+![thanku](https://github.com/Raghvendra2811/Nykaa-Web-Clone/blob/main/src/thanku.png)
 
 
 # Contributors
