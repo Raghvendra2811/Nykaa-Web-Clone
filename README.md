@@ -55,7 +55,7 @@ Fully Responsive Landing Page
 ![thanku](https://github.com/Raghvendra2811/Nykaa-Web-Clone/blob/main/src/thanku.png)
 
 
-# Contributors
+# Contributors 
 
 ### Ankit Rana 
 
