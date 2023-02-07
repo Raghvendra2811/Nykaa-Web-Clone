@@ -29,7 +29,7 @@ Fully Responsive Landing Page
 
 ### Product Page:
 
-5.In the product page we see various products on the basis of popularity and also user can sort the products on the basis of their prices and there is options to add products in cart and if we click on particular product, the user will navigate to the product detail page.
+5.In the product page we see various products on the basis of popularity and also user can sort the products on the basis of their prices and there is options to add products in cart and if we click on particular product, the user will navigate to the product detail page
 
 ![product](https://github.com/Raghvendra2811/Nykaa-Web-Clone/blob/main/src/product.png)
 
